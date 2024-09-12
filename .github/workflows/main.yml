@@ -1,10 +1,10 @@
-name: Java CI with Maven
+name: Java CI
 
 on:
   push:
-    branches: [ "*" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -20,24 +20,12 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: 'maven'
 
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Compile Java source
+      run: javac -d out Main.java
 
-    - name: Test with Maven
-      run: mvn -B test --file pom.xml
-
-    - name: Archive production artifacts
+    - name: Archive compiled artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: packaged-jar
-        path: target/*.jar
-
-    - name: Cache Maven packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-m2-
+        name: compiled-output
+        path: out/

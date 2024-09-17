@@ -165,4 +165,52 @@ public class Main {
             }
         }
     }
+
+    /**
+     * Calculates the total distance traveled by a rover given a sequence of commands.
+     * This method doesn't modify the rover's actual position, it just calculates
+     * the theoretical distance traveled.
+     *  Parameters:
+     * ===initialX The initial X coordinate of the rover
+     * ===initialY The initial Y coordinate of the rover
+     * ===initialOrientation The initial orientation of the rover
+     * ===commands The sequence of commands (L, R, M) for the rover
+     * return : The total distance traveled by the rover
+     */
+    public static int CalculateDistanceTraveled(int initialX, int initialY, Orientation initialOrientation, String commands) {
+        int x = initialX;
+        int y = initialY;
+        Orientation orientation = initialOrientation;
+        int distance = 0;
+
+        for (char command : commands.toCharArray()) {
+            switch (command) {
+                case 'L':
+                case 'R':
+                    orientation = (command == 'L') ? orientation.left() : orientation.right();
+                    break;
+                case 'M':
+                    switch (orientation) {
+                        case N: y++; break;
+                        case E: x++; break;
+                        case S: y--; break;
+                        case W: x--; break;
+                    }
+                    distance++;
+                    break;
+            }
+        }
+
+        return distance;
+    }
+
+    /**
+     *  usage of the CalculateDistanceTraveled method.
+     */
+    public static void DemonstrateDistanceCalculation() {
+        String commands = "LMLMLMLMM";
+        int distance = CalculateDistanceTraveled(1, 2, Orientation.N, commands);
+        System.out.println("Total distance traveled: " + distance + " units");
+    }
 }
+

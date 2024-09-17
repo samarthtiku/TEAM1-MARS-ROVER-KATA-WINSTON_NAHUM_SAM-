@@ -1,6 +1,7 @@
 public class Main {
-    public static void main(String[] args) {   }
-
+    public static void main(String[] args) {
+        System.out.println("Elloo world! ");
+    }
 
     /*
         Nahum's Approach
@@ -30,74 +31,72 @@ public class Main {
             Values: X, Y
      */
 
-        /**
-         * Plateau Class:
-         * Creates bounds and checks if they are valid
+    /**
+     * Plateau Class:
+     * Creates bounds and checks if they are valid
+     */
+    public static class Plateau {
+        //Initialization of width and height of board
+        private int width;
+        private int height;
+        public Plateau(int width, int height){
+            this.width = width;
+            this.height = height;
+        }
+        /*
+        Check validity of positions
          */
-        public class Plateau {
-            //Initialization of width and height of board
-            private int width;
-            private int height;
-
-            public Plateau(int width, int height) {
-                this.width = width;
-                this.height = height;
+        public boolean isValidPosition(int x, int y){
+            if (x >= 0 && x <= width && y >= 0 && y <= height) {
+                return true;
             }
+            else{
+                return false;
+            }
+        }
+    }
 
-            /*
-            Check validity of positions
-             */
-            public boolean isValidPosition(int x, int y) {
-                if (x >= 0 && x <= width && y >= 0 && y <= height) {
-                    return true;
-                } else {
-                    return false;
-                }
+    /**
+     * Orientation Class:
+     * Valid orientations
+     */
+    public enum Orientation {
+        //Valid orientations
+        N, E, S, W;
+
+        /*
+        Move left
+         */
+        public Orientation left() {
+            switch (this) {
+                case N:
+                    return W;
+                case E:
+                    return N;
+                case S:
+                    return E;
+                case W:
+                    return S;
+                default:
+                    throw new IllegalStateException("Unknown orientation");
             }
         }
 
-        /**
-         * Orientation Class:
-         * Valid orientations
+        /*
+        Move right
          */
-        public enum Orientation {
-            //Valid orientations
-            N, E, S, W;
-
-            /*
-            Move left
-             */
-            public Orientation left() {
-                switch (this) {
-                    case N:
-                        return W;
-                    case E:
-                        return N;
-                    case S:
-                        return E;
-                    case W:
-                        return S;
-                    default:
-                        throw new IllegalStateException("Unknown orientation");
-                }
-            }
-
-            /*
-            Move right
-             */
-            public Orientation right() {
-                switch (this) {
-                    case N:
-                        return E;
-                    case E:
-                        return S;
-                    case S:
-                        return W;
-                    case W:
-                        return N;
-                    default:
-                        throw new IllegalStateException("Unknown orientation");
-                }
+        public Orientation right() {
+            switch (this) {
+                case N:
+                    return E;
+                case E:
+                    return S;
+                case S:
+                    return W;
+                case W:
+                    return N;
+                default:
+                    throw new IllegalStateException("Unknown orientation");
             }
         }
 
@@ -105,7 +104,7 @@ public class Main {
          * Rover Class:
          * Represents the rover on the plateau
          **/
-        public class Rover {
+        public static class Rover {
             private int x;
             private int y;
             private Orientation orientation;
@@ -119,26 +118,51 @@ public class Main {
             }
 
             public void move() {
-                // add - Implement move logic based on current orientation
+                switch (orientation) {
+                    case N:
+                        if (plateau.isValidPosition(x, y + 1)) y++;
+                        break;
+                    case E:
+                        if (plateau.isValidPosition(x + 1, y)) x++;
+                        break;
+                    case S:
+                        if (plateau.isValidPosition(x, y - 1)) y--;
+                        break;
+                    case W:
+                        if (plateau.isValidPosition(x - 1, y)) x--;
+                        break;
+                }
             }
 
             public void turnL() {
-                // add - Update orientation when turning left
+                orientation = orientation.left();
             }
 
             public void turnR() {
-                // add - Update orientation when turning right
+                orientation = orientation.right();
             }
 
             public void processCommands(String commands) {
-                // add - Process multiple commands
+                for (int i = 0; i < commands.length(); i++) {
+                    char command = commands.charAt(i);
+                    switch (command) {
+                        case 'L':
+                            turnL();
+                            break;
+                        case 'R':
+                            turnR();
+                            break;
+                        case 'M':
+                            move();
+                            break;
+                        default:
+                            throw new IllegalArgumentException("Invalid command: " + command);
+                    }
+                }
             }
-
             public String getPosition() {
                 return x + " " + y + " " + orientation;
             }
         }
-
-
     }
-
+}

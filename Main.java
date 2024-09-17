@@ -1,6 +1,14 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Elloo world! ");
+        try {
+            TeamOneRoverSimulation();
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading input: " + e.getMessage());
+        }
     }
 
     /*
@@ -207,10 +215,53 @@ public class Main {
     /**
      *  usage of the CalculateDistanceTraveled method.
      */
-    public static void DemonstrateDistanceCalculation() {
+    public static void DistanceCalculation() {
         String commands = "LMLMLMLMM";
         int distance = CalculateDistanceTraveled(1, 2, Orientation.N, commands);
         System.out.println("Total distance traveled: " + distance + " units");
+    }
+    /*
+    * Adding an Interactive simulation of Mars Rover( will update it )
+    * This method prompts the user to input : the plateau and rovers,
+    * and would generate output based on the commands
+    * */
+    public static void TeamOneRoverSimulation() throws IOException {
+        // BufferedReader to read input lines, then split and parse them as needed.
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Enter plateau size (width height):");
+        String[] plateauSize = reader.readLine().split(" ");
+        int width = Integer.parseInt(plateauSize[0]);
+        int height = Integer.parseInt(plateauSize[1]);
+        // A new Plateau object with the input dimensions(width, height)
+        Plateau plateau = new Plateau(width, height);
+
+        // Loop to handle two rovers
+        for (int i = 1; i <= 2; i++) {
+            // This is a prompt for and read the initial position and orientation of the rover
+            System.out.println("Enter Rover " + i + " initial position and orientation (x y N/E/S/W):");
+            String[] roverInput = reader.readLine().split(" ");
+            int x = Integer.parseInt(roverInput[0]);
+            int y = Integer.parseInt(roverInput[1]);
+            Orientation orientation = Orientation.valueOf(roverInput[2]);
+            // Creating a new Rover object with the input position and orientation
+            Orientation.Rover rover = new Orientation.Rover(x, y, orientation, plateau);
+
+            // This is a prompt for and to read the commands for the rover
+            System.out.println("Enter commands for Rover " + i + ":");
+            String commands = reader.readLine();
+            // Displaying the initial position of the rover
+            System.out.println("Rover " + i + " initial position: " + rover.getPosition());
+            // It will process the commands and move the rover
+            rover.processCommands(commands);
+            // Finally , it will display the final position of the rover after executing the commands
+            System.out.println("Rover " + i + " final position: " + rover.getPosition());
+        }
+        // Close the BufferedReader
+        reader.close();
+
+        // Distance calculation
+        DistanceCalculation();
     }
 }
 

@@ -6,3 +6,4 @@
 # Time Log - September 14, 2024 (Created Rover class : added processCommands and getPosition methods.. & fixed some bug )
 # Time Log - September 16, 2024 10 pm(Filled in methods in rover class)
 # Time Log - September 16, 2024 11pm (Notes on breaking down of our MARS ROVER project structure & Calculating the total distance traveled by a rover )
+# Time Log - September 17, 2024 9:24 am ( Adding simulation of Mars Rover( will update it later  )) 

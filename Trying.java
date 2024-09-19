@@ -2,7 +2,7 @@ import javax.annotation.processing.RoundEnvironment;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-public class Trying {
+public class Running {
     public static void main(String[] args) {
         Plateau plateau = new Plateau(5, 5);
 

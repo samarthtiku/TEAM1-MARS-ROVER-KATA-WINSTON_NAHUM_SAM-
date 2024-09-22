@@ -8,18 +8,21 @@ repositories {
 }
 
 dependencies {
+    // JUnit for testing
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 }
 
 application {
-    mainClass.set("com.marsrover.Main")
+    // main class
+    mainClass.set("StartMain")
 }
 
 tasks.test {
-    useJUnitPlatform()
+    useJUnitPlatform() //  JUnit
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17)) // Use Java 17
+    }
 }

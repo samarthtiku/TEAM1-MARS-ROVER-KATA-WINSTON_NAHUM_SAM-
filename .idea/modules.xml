@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-.iml" filepath="$PROJECT_DIR$/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM.iml" filepath="$PROJECT_DIR$/gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM.test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM.test.iml" />
     </modules>
   </component>
 </project>

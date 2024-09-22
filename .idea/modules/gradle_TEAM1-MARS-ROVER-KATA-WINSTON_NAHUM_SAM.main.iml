@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM:main" external.linked.project.path="$MODULE_DIR$/../../gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM" external.root.project.path="$MODULE_DIR$/../../gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM" external.system.id="GRADLE" external.system.module.group="org.example" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/build/classes/java/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../gradle_TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="jdk" jdkName="temurin-17" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

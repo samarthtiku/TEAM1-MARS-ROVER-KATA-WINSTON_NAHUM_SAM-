@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI with Gradle
 
 on:
   push:
@@ -8,24 +8,40 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-        name: Checkout code
 
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'temurin'
 
-      - name: Compile Java source
-        run: javac -d out Main.java
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
 
-      - name: Archive compiled artifacts
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
+
+      - name: Run tests
+        run: ./gradlew test
+
+      - name: Install Infer
+        run: |
+          VERSION=1.1.0; \
+          curl -sSL "https://github.com/facebook/infer/releases/download/v$VERSION/infer-linux64-v$VERSION.tar.xz" \
+          | sudo tar -C /opt -xJ && \
+          echo "/opt/infer-linux64-v$VERSION/bin" >> $GITHUB_PATH
+
+      - name: Run Infer
+        run: infer run -- ./gradlew build
+
+      - name: Upload Infer results
         uses: actions/upload-artifact@v3
         with:
-          name: compiled-output
-          path: out/
+          name: infer-out
+          path: infer-out

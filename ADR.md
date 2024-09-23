@@ -269,95 +269,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-TEAM 1 Mars Rover Simulation ADR
-Metadata
-Field	Value
-Status	Proposed
-Dates
-Decision-makers	Winston, Nahum, Samarth
-Consulted
-Informed
-Context and Problem Statement
-As Team 1, we are working on the mars-rover-kata project, which involves Test-Driven Development (TDD) using the Thoughtworks mars-rover problem. The problem involves navigating robotic rovers on a rectangular plateau on Mars. The rovers' positions are represented by x and y coordinates and a direction (N, E, S, W). They can be controlled through simple commands: 'L' (turn left), 'R' (turn right), and 'M' (move forward).
-Our task is to implement a solution that can process a series of these commands for multiple rovers and output their final positions. This project serves as a team exercise to practice collaborative software development, software architecture and design concepts, and test-driven development.
-Key aspects of the problem include:
-1. Defining the plateau's dimensions
-2. Initializing rovers with their starting positions and orientations
-3. Processing movement commands for each rover sequentially
-4. Ensuring rovers don't move outside the plateau boundaries
-5. Outputting the final positions of all rovers
-   As a team project, we need to make architectural decisions that will allow for efficient development, easy maintenance, and potential future enhancements.
-   Decision Drivers
-* Code maintainability and readability
-* Extensibility for future features
-* Performance considerations
-* Adherence to object-oriented design principles
-* Testability of the codebase
-  Decisions
-  Decision 1: Use of Enum for Orientation
-  We will use an Enum class to represent the cardinal directions (N, E, S, W) for the rover's orientation.
-* Good, because it provides type safety and prevents invalid orientations
-* Good, because it allows for easy implementation of left and right turns
-* Bad, because it might be less flexible if we need to add diagonal directions in the future
-  Decision 2: Immutable Plateau Class
-  The Plateau class will be implemented as an immutable class with final fields for width and height.
-* Good, because it ensures the plateau size cannot be accidentally changed during runtime
-* Good, because it simplifies reasoning about the code and prevents certain bugs
-* Bad, because it might limit flexibility if dynamic resizing of the plateau is needed in the future
-  Decision 3: Command Pattern for Rover Movement
-  We will use the Command pattern to implement the rover's movement and rotation commands (L, R, M).
-* Good, because it allows for easy addition of new commands in the future
-* Good, because it separates the command logic from the Rover class, adhering to the Single Responsibility Principle
-* Bad, because it adds some complexity to the codebase
-  Decision 4: Use of Exceptions for Error Handling
-  We will use custom exceptions (IllegalArgumentException, IllegalStateException) for handling error scenarios such as invalid input or out-of-bounds movement.
-* Good, because it provides clear and specific error messages
-* Good, because it allows for centralized error handling in the main program
-* Bad, because excessive use of exceptions might impact performance if errors are frequent
-  Decision 5: Use of Strategy Pattern for Movement Calculation
-  We will implement a Strategy pattern for calculating new positions based on the current orientation.
-* Good, because it allows for easy modification of movement logic if requirements change
-* Good, because it separates movement calculation from the Rover class, improving maintainability
-* Bad, because it might be overkill for the current simple movement logic
-  Decision 6: Implementation of a RoverUtilities Class
-  We will create a RoverUtilities class to handle common operations and calculations, such as distance traveled.
-* Good, because it centralizes common utility functions
-* Good, because it can be easily extended to include more utility functions in the future
-* Bad, because it might lead to a "god class" if not carefully managed
-  Decision 7: Use of ANSI Color Codes for Console Output
-  We will use ANSI color codes to enhance the console output of the simulation.
-* Good, because it improves the user experience by making the output more readable
-* Good, because it allows for visual differentiation of different types of information
-* Bad, because it might not work on all console environments
-  More Information
-  The implementation details can be found in the provided Java files. Further decisions may be needed as the project evolves, particularly regarding the handling of multiple rovers, obstacle detection, and more complex command sequences.
-  For the latest updates and to view the source code, please visit our GitHub repository: https://github.com/DanilSuits/mars-rover-kata
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-
 # Time Log - September 8, 2024 6:38 pm
 # Time Log - September 9, 2024 3:48 pm(Notes for Tested Input and Expected Output )
@@ -367,3 +278,5 @@ Key aspects of the problem include:
 # Time Log - September 16, 2024 10 pm(Filled in methods in rover class)
 # Time Log - September 16, 2024 11pm (Notes on breaking down of our MARS ROVER project structure & Calculating the total distance traveled by a rover )
 # Time Log - September 17, 2024 9:24 am ( Adding simulation of Mars Rover( will update it later  )) 
+# Time Log - September 22, 2024  All Day
+# Time Log - September 23, 2024  5am - 8am

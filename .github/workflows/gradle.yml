@@ -2,9 +2,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ main, 2nd-Branch, 4th-Branch ]
+    branches: [ main, 2nd-Branch, 4th-Branch, 5th-branch ]
   pull_request:
-    branches: [ main, 2nd-Branch, 4th-Branch ]
+    branches: [ main, 2nd-Branch, 4th-Branch, 5th-branch ]
 
 jobs:
   build:

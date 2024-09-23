@@ -1,8 +1,11 @@
+rootProject.name = "TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM"
+
 pluginManagement {
-    plugins {
-        kotlin("jvm") version "2.0.20"
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
     }
-}
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+    plugins {
+        kotlin("jvm") version "1.9.0"
+    }
 }

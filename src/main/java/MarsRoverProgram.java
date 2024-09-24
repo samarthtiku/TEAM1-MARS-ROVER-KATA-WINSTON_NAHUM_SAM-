@@ -1,9 +1,7 @@
-
 import com.google.inject.Inject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class MarsRoverProgram {
     private final Plateau plateau;
@@ -50,13 +48,13 @@ public class MarsRoverProgram {
     }
 
     private void controlRovers() throws IOException {
-        System.out.println("Use N (up), W (left), S (down), E (right), J (jump for jumping rovers) to move rovers. Press 'q' to finish a rover's commands.");
+        System.out.println("Use N (up), W (left), S (down), E (right) to move rovers. Press 'q' to finish a rover's commands.");
         for (AbstractRover rover : rovers) {
             System.out.println("Controlling " + rover.getId() + ":");
             int attempts = 0;
             while (attempts < Configuration.MAX_ATTEMPTS) {
                 try {
-                    String commands = inputHandler.getInput();
+                    String commands = inputHandler.getInput().toUpperCase().replaceAll("\\s", "");
                     if (commands.equalsIgnoreCase("q")) {
                         break;
                     }

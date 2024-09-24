@@ -2,9 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
 import java.io.IOException;
-
 import static org.mockito.Mockito.*;
 
 class MarsRoverProgramTest {
@@ -15,34 +13,33 @@ class MarsRoverProgramTest {
     private RoverFactory roverFactory;
     @Mock
     private InputHandler inputHandler;
-    @Mock
-    private AbstractRover mockRover;
 
     private MarsRoverProgram program;
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        MockitoAnnotations.openMocks(this);  // Initialize mocks
         program = new MarsRoverProgram(plateau, roverFactory, inputHandler);
     }
 
     @Test
     void testRun() throws IOException {
-        // Mock user inputs
+        // Mock the user input sequence
         when(inputHandler.getInput())
                 .thenReturn("standard 1 2 N")
                 .thenReturn("done")
                 .thenReturn("LMLMLMLMM")
                 .thenReturn("q");
 
-        // Mock rover creation and set ID
+        // Mock rover creation
+        AbstractRover mockRover = mock(StandardRover.class);
         when(roverFactory.createRover(anyString(), anyInt(), anyInt(), any(), any(), anyString()))
                 .thenReturn(mockRover);
-        when(mockRover.getId()).thenReturn("ROVER1");
 
+        // Run the program
         program.run();
 
-        // Verify that the rover was created and commands were processed
+        // Verify that the rover was created and processed the commands
         verify(roverFactory).createRover(eq("ROVER1"), eq(1), eq(2), eq(Orientation.N), eq(plateau), eq("standard"));
         verify(mockRover).processCommands("LMLMLMLMM");
     }

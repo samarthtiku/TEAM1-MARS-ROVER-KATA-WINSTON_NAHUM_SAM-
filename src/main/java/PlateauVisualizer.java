@@ -24,6 +24,7 @@ public class PlateauVisualizer {
                     if (roverId != null) {
                         System.out.print(getColorCode(roverId) + roverId + " " + ANSI_RESET);
                     } else {
+                        // Handle null roverId
                         System.out.print(". ");
                     }
                 } else {
@@ -35,14 +36,19 @@ public class PlateauVisualizer {
         System.out.println();
 
         for (AbstractRover rover : rovers) {
-            System.out.println(getColorCode(rover.getId()) + rover.getId() + ": " + rover.getPosition() +
-                    ", Distance: " + rover.getDistanceTraveled() + ANSI_RESET);
+            if (rover.getId() != null) {
+                System.out.println(getColorCode(rover.getId()) + rover.getId() + ": " + rover.getPosition() +
+                        ", Distance: " + rover.getDistanceTraveled() + ANSI_RESET);
+            } else {
+                System.out.println("Unknown Rover: " + rover.getPosition() +
+                        ", Distance: " + rover.getDistanceTraveled());
+            }
         }
     }
 
     private static String getColorCode(String roverId) {
-        if (roverId == null) {
-            return ANSI_RESET;  // Handle null case
+        if (roverId == null || roverId.isEmpty()) {
+            return ANSI_CYAN; // Default color for unknown or null roverId
         }
         switch (roverId.charAt(roverId.length() - 1)) {
             case '1': return ANSI_RED;

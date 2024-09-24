@@ -1,5 +1,4 @@
 public class StandardRover extends AbstractRover {
-
     public StandardRover(String id, int x, int y, Orientation orientation, Plateau plateau) {
         super(id, x, y, orientation, plateau);
     }
@@ -32,6 +31,7 @@ public class StandardRover extends AbstractRover {
         }
     }
 
+    // Setter for orientation to be used in tests
     public void setOrientation(Orientation orientation) {
         this.orientation = orientation;
     }

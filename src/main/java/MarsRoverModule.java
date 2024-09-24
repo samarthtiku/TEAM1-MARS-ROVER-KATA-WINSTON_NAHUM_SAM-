@@ -5,6 +5,6 @@ public class MarsRoverModule extends AbstractModule {
     protected void configure() {
         bind(Plateau.class).toProvider(PlateauProvider.class);
         bind(RoverFactory.class).to(RoverFactoryImpl.class);
-        bind(InputHandler.class).to(ConsoleInputHandler.class); // This should now work
+        bind(InputHandler.class).to(ConsoleInputHandler.class);
     }
 }

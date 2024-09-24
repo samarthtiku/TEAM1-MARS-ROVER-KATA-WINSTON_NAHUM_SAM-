@@ -7,7 +7,6 @@ class AbstractRoverTest {
     private Plateau plateau;
     private TestRover rover;
 
-    // TestRover is a concrete implementation of AbstractRover for testing
     private class TestRover extends AbstractRover {
         public TestRover(String id, int x, int y, Orientation orientation, Plateau plateau) {
             super(id, x, y, orientation, plateau);

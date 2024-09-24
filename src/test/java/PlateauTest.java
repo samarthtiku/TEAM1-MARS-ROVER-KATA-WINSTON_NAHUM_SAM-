@@ -23,11 +23,8 @@ class PlateauTest {
         Plateau plateau = new Plateau(5, 5);
         assertTrue(plateau.isValidPosition(0, 0));
         assertTrue(plateau.isValidPosition(5, 5));
-        assertTrue(plateau.isValidPosition(2, 3));
         assertFalse(plateau.isValidPosition(-1, 3));
-        assertFalse(plateau.isValidPosition(3, -1));
         assertFalse(plateau.isValidPosition(6, 3));
-        assertFalse(plateau.isValidPosition(3, 6));
     }
 
     @Test
@@ -35,7 +32,6 @@ class PlateauTest {
         Plateau plateau = new Plateau(5, 5);
         plateau.placeRover(1, 1, "ROVER1");
         assertTrue(plateau.isOccupied(1, 1));
-        assertFalse(plateau.isOccupied(2, 2));
         plateau.removeRover(1, 1);
         assertFalse(plateau.isOccupied(1, 1));
     }

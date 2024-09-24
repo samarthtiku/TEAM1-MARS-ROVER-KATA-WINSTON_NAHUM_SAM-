@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PlateauTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-24T19:08:59" hostname="samarths-Air.attlocal.net" time="0.029">
+<testsuite name="PlateauTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-24T19:22:22" hostname="samarths-Air.attlocal.net" time="0.02">
   <properties/>
-  <testcase name="testPlaceAndRemoveRover()" classname="PlateauTest" time="0.011"/>
-  <testcase name="testInvalidPlateauCreation()" classname="PlateauTest" time="0.01"/>
-  <testcase name="testValidPlateauCreation()" classname="PlateauTest" time="0.001"/>
+  <testcase name="testPlaceAndRemoveRover()" classname="PlateauTest" time="0.007"/>
+  <testcase name="testInvalidPlateauCreation()" classname="PlateauTest" time="0.008"/>
+  <testcase name="testValidPlateauCreation()" classname="PlateauTest" time="0.002"/>
   <testcase name="testIsValidPosition()" classname="PlateauTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

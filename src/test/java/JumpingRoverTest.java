@@ -16,11 +16,11 @@ class JumpingRoverTest {
 
     @Test
     void testProcessCommands() {
-        // Test processing valid commands "LMLMRJ"
+        // Test processing valid commands "LMLMRJ" but ensure rover does not jump out of bounds
         jumpingRover.processCommands("LMLMRJ");
-        assertEquals(1, jumpingRover.getX());
-        assertEquals(4, jumpingRover.getY());
-        assertEquals(Orientation.N, jumpingRover.getOrientation());
+        assertEquals(0, jumpingRover.getX());  // Rover should be at (0, 1), not jumped
+        assertEquals(1, jumpingRover.getY());
+        assertEquals(Orientation.W, jumpingRover.getOrientation());
     }
 
     @Test
@@ -76,10 +76,10 @@ class JumpingRoverTest {
 
     @Test
     void testMultipleCommands() {
-        // Test a series of valid commands
+        // Test a series of valid commands but the rover should not jump out of bounds
         jumpingRover.processCommands("LMLMRJ");
-        assertEquals(1, jumpingRover.getX());
-        assertEquals(4, jumpingRover.getY());
-        assertEquals(Orientation.N, jumpingRover.getOrientation());
+        assertEquals(0, jumpingRover.getX());  // Rover should remain at (0, 1), as jump out of bounds failed
+        assertEquals(1, jumpingRover.getY());
+        assertEquals(Orientation.W, jumpingRover.getOrientation());
     }
 }

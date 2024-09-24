@@ -1,0 +1,10 @@
+MarsRoverProgramTest.class
+AbstractRoverTest.class
+OrientationTest.class
+ConsoleInputHandlerTest.class
+AbstractRoverTest$TestRover.class
+PlateauTest.class
+StandardRoverTest.class
+RoverFactoryTest.class
+JumpingRoverTest.class
+PlateauVisualizerTest.class

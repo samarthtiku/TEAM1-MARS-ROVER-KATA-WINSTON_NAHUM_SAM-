@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MarsRoverProgramTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-24T21:26:54" hostname="samarths-Air.attlocal.net" time="1.926">
+<testsuite name="MarsRoverProgramTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-24T22:15:40" hostname="samarths-Air.attlocal.net" time="1.971">
   <properties/>
-  <testcase name="testRun()" classname="MarsRoverProgramTest" time="1.926"/>
+  <testcase name="testRun()" classname="MarsRoverProgramTest" time="1.971"/>
   <system-out><![CDATA[Enter rover type (standard/jumping), position and orientation (type x y N/E/S/W) or 'done' to finish:
 ROVER1 (standard) deployed successfully.
 Enter rover type (standard/jumping), position and orientation (type x y N/E/S/W) or 'done' to finish:

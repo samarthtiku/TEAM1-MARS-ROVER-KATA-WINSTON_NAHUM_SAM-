@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="OrientationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T21:26:56" hostname="samarths-Air.attlocal.net" time="0.015">
+<testsuite name="OrientationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T22:15:42" hostname="samarths-Air.attlocal.net" time="0.018">
   <properties/>
   <testcase name="testLeftTurn()" classname="OrientationTest" time="0.001"/>
   <testcase name="testRightTurn()" classname="OrientationTest" time="0.002"/>
-  <testcase name="testFromString()" classname="OrientationTest" time="0.004"/>
+  <testcase name="testFromString()" classname="OrientationTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

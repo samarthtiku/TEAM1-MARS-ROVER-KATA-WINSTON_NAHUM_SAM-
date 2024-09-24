@@ -11,7 +11,8 @@ repositories {
 
 dependencies {
     // Google Guice for dependency injection
-    implementation("com.google.inject:guice:5.1.0")  // Add this dependency
+    implementation("com.google.inject:guice:5.1.0")
+    implementation("javax.inject:javax.inject:1")
 
     // JUnit 5 for testing
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JumpingRoverTest" tests="7" skipped="0" failures="2" errors="0" timestamp="2024-09-24T16:41:53" hostname="samarths-Air.attlocal.net" time="0.076">
+<testsuite name="JumpingRoverTest" tests="7" skipped="0" failures="2" errors="0" timestamp="2024-09-24T17:19:25" hostname="samarths-Air.attlocal.net" time="0.072">
   <properties/>
-  <testcase name="testMoveOutOfBounds()" classname="JumpingRoverTest" time="0.033"/>
-  <testcase name="testJumpOutOfBounds()" classname="JumpingRoverTest" time="0.002"/>
-  <testcase name="testInvalidCommand()" classname="JumpingRoverTest" time="0.009"/>
-  <testcase name="testMultipleCommands()" classname="JumpingRoverTest" time="0.002">
+  <testcase name="testMoveOutOfBounds()" classname="JumpingRoverTest" time="0.029"/>
+  <testcase name="testJumpOutOfBounds()" classname="JumpingRoverTest" time="0.003"/>
+  <testcase name="testInvalidCommand()" classname="JumpingRoverTest" time="0.01"/>
+  <testcase name="testMultipleCommands()" classname="JumpingRoverTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -99,8 +99,8 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testJumpWithinBounds()" classname="JumpingRoverTest" time="0.001"/>
-  <testcase name="testProcessCommands()" classname="JumpingRoverTest" time="0.008">
+  <testcase name="testJumpWithinBounds()" classname="JumpingRoverTest" time="0.002"/>
+  <testcase name="testProcessCommands()" classname="JumpingRoverTest" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -195,7 +195,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testMoveWithinBounds()" classname="JumpingRoverTest" time="0.003"/>
+  <testcase name="testMoveWithinBounds()" classname="JumpingRoverTest" time="0.001"/>
   <system-out><![CDATA[Warning: Rover JUMP2 cannot move. Position out of bounds.
 Warning: Rover JUMP2 cannot jump. Position out of bounds.
 Warning: Rover JUMP1 cannot jump. Position out of bounds.

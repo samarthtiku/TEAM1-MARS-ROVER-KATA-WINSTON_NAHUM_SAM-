@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ConsoleInputHandlerTest" tests="3" skipped="0" failures="2" errors="0" timestamp="2024-09-24T16:41:53" hostname="samarths-Air.attlocal.net" time="0.037">
+<testsuite name="ConsoleInputHandlerTest" tests="3" skipped="0" failures="2" errors="0" timestamp="2024-09-24T17:19:25" hostname="samarths-Air.attlocal.net" time="0.06">
   <properties/>
-  <testcase name="testGetInput()" classname="ConsoleInputHandlerTest" time="0.023">
+  <testcase name="testGetInput()" classname="ConsoleInputHandlerTest" time="0.033">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;Test Input&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;Test Input&gt; but was: &lt;&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -96,7 +96,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testGetInputEmpty()" classname="ConsoleInputHandlerTest" time="0.002">
+  <testcase name="testGetInputEmpty()" classname="ConsoleInputHandlerTest" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;&gt; but was: &lt;Test Input&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;&gt; but was: &lt;Test Input&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -191,7 +191,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testIOException()" classname="ConsoleInputHandlerTest" time="0.005"/>
+  <testcase name="testIOException()" classname="ConsoleInputHandlerTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

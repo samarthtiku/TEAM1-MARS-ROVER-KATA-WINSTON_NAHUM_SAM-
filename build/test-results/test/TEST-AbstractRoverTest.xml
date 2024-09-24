@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AbstractRoverTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-24T16:41:53" hostname="samarths-Air.attlocal.net" time="0.023">
+<testsuite name="AbstractRoverTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-24T17:19:25" hostname="samarths-Air.attlocal.net" time="0.024">
   <properties/>
-  <testcase name="testInitialPosition()" classname="AbstractRoverTest" time="0.014"/>
-  <testcase name="testGetters()" classname="AbstractRoverTest" time="0.001"/>
+  <testcase name="testInitialPosition()" classname="AbstractRoverTest" time="0.017"/>
+  <testcase name="testGetters()" classname="AbstractRoverTest" time="0.0"/>
   <testcase name="testTurnRight()" classname="AbstractRoverTest" time="0.001"/>
-  <testcase name="testTurnLeft()" classname="AbstractRoverTest" time="0.001"/>
+  <testcase name="testTurnLeft()" classname="AbstractRoverTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

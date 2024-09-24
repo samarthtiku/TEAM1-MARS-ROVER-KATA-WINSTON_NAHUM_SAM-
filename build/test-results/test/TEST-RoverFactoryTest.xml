@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RoverFactoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T17:19:27" hostname="samarths-Air.attlocal.net" time="0.008">
+<testsuite name="RoverFactoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T19:09:00" hostname="samarths-Air.attlocal.net" time="0.022">
   <properties/>
-  <testcase name="testCreateStandardRover()" classname="RoverFactoryTest" time="0.003"/>
-  <testcase name="testCreateJumpingRover()" classname="RoverFactoryTest" time="0.0"/>
-  <testcase name="testCreateUnknownRoverType()" classname="RoverFactoryTest" time="0.002"/>
+  <testcase name="testCreateStandardRover()" classname="RoverFactoryTest" time="0.006"/>
+  <testcase name="testCreateJumpingRover()" classname="RoverFactoryTest" time="0.002"/>
+  <testcase name="testCreateUnknownRoverType()" classname="RoverFactoryTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

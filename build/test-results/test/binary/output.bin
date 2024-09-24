@@ -1,7 +1,8 @@
-:Warning: Rover JUMP2 cannot move. Position out of bounds.
-:Warning: Rover JUMP2 cannot jump. Position out of bounds.
-	:Warning: Rover JUMP1 cannot jump. Position out of bounds.
-:Warning: Rover JUMP1 cannot jump. Position out of bounds.
+
+:Warning: Rover JUMP2 cannot move. Position out of bounds.
+:Warning: Rover JUMP2 cannot jump. Position out of bounds.
+:Warning: Rover JUMP1 cannot jump. Position out of bounds.
+:Warning: Rover JUMP1 cannot jump. Position out of bounds.
 fEnter rover type (standard/jumping), position and orientation (type x y N/E/S/W) or 'done' to finish:
 )ROVER1 (standard) deployed successfully.
 fEnter rover type (standard/jumping), position and orientation (type x y N/E/S/W) or 'done' to finish:

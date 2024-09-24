@@ -10,4 +10,8 @@ public enum Orientation {
     public Orientation right() {
         return VALUES[(this.ordinal() + 1) % 4];
     }
+
+    public static Orientation fromString(String input) {
+        return valueOf(input.toUpperCase());
+    }
 }

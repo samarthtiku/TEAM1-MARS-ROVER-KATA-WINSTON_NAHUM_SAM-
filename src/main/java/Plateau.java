@@ -1,24 +1,19 @@
-public final class Plateau {
-    private final int width;
-    private final int height;
+public class Plateau {
+    private int width;
+    private int height;
+    private boolean[][] obstacles;
 
     public Plateau(int width, int height) {
-        if (width <= 0 || height <= 0) {
-            throw new IllegalArgumentException("Plateau dimensions must be positive.");
-        }
         this.width = width;
         this.height = height;
+        this.obstacles = new boolean[width][height];
     }
 
-    public boolean isValidPosition(int x, int y) {
-        return x >= 0 && x <= width && y >= 0 && y <= height;
+    public void addObstacle(int x, int y) {
+        obstacles[x][y] = true;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
+    public boolean hasObstacle(int x, int y) {
+        return obstacles[x][y];
     }
 }

@@ -27,7 +27,13 @@ dependencies {
 }
 
 tasks.test {
+    // Explicitly specify the test framework (JUnit 5)
     useJUnitPlatform()
+
+    // Add test logging for more visibility on test execution
+    testLogging {
+        events("passed", "failed", "skipped")
+    }
 }
 
 java {

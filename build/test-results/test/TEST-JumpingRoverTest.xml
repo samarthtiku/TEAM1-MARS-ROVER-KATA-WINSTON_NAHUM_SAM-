@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JumpingRoverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-09-24T19:22:20" hostname="samarths-Air.attlocal.net" time="0.063">
+<testsuite name="JumpingRoverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-09-24T21:26:54" hostname="samarths-Air.attlocal.net" time="0.052">
   <properties/>
-  <testcase name="testMoveOutOfBounds()" classname="JumpingRoverTest" time="0.032"/>
-  <testcase name="testJumpOutOfBounds()" classname="JumpingRoverTest" time="0.005"/>
-  <testcase name="testInvalidCommand()" classname="JumpingRoverTest" time="0.009"/>
-  <testcase name="testMultipleCommands()" classname="JumpingRoverTest" time="0.005"/>
-  <testcase name="testJumpWithinBounds()" classname="JumpingRoverTest" time="0.003"/>
-  <testcase name="testProcessCommands()" classname="JumpingRoverTest" time="0.002"/>
-  <testcase name="testMoveWithinBounds()" classname="JumpingRoverTest" time="0.001"/>
+  <testcase name="testMoveOutOfBounds()" classname="JumpingRoverTest" time="0.029"/>
+  <testcase name="testJumpOutOfBounds()" classname="JumpingRoverTest" time="0.003"/>
+  <testcase name="testInvalidCommand()" classname="JumpingRoverTest" time="0.008"/>
+  <testcase name="testMultipleCommands()" classname="JumpingRoverTest" time="0.003"/>
+  <testcase name="testJumpWithinBounds()" classname="JumpingRoverTest" time="0.002"/>
+  <testcase name="testProcessCommands()" classname="JumpingRoverTest" time="0.001"/>
+  <testcase name="testMoveWithinBounds()" classname="JumpingRoverTest" time="0.0"/>
   <system-out><![CDATA[Processing commands for Rover JUMP2 at initial position (0, 5)
 Rover JUMP2 attempting to move from (0, 5) to (0, 6)
 Warning: Rover JUMP2 cannot move. Position out of bounds.

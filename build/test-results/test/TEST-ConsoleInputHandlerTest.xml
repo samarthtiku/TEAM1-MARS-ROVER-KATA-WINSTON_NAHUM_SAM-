@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ConsoleInputHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T19:22:20" hostname="samarths-Air.attlocal.net" time="0.016">
+<testsuite name="ConsoleInputHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T21:26:54" hostname="samarths-Air.attlocal.net" time="0.012">
   <properties/>
-  <testcase name="testGetInput()" classname="ConsoleInputHandlerTest" time="0.005"/>
+  <testcase name="testGetInput()" classname="ConsoleInputHandlerTest" time="0.004"/>
   <testcase name="testGetInputEmpty()" classname="ConsoleInputHandlerTest" time="0.003"/>
   <testcase name="testIOException()" classname="ConsoleInputHandlerTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>

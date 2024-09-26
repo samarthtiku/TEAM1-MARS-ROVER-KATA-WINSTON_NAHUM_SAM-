@@ -168,24 +168,7 @@ Use an **Enum** to represent the four cardinal directions (N, E, S, W) and inclu
 
 ---
 
-## 🔄 ADR 11: Iterator Pattern for Command Processing
-
-🟦 **Context**
-We need an efficient way to process a sequence of commands for each rover.
-
-🟩 **Decision**
-Implement the **Iterator Pattern** to process the sequence of movement commands.
-
-🟨 **Consequences**
-- ✅ Provides a standardized way to traverse the command sequence
-- ✅ Allows for easy extension to support different command sources (e.g., file, network)
-- ✅ Separates the traversal of commands from the underlying representation
-- ❌ Adds some complexity to the command processing logic
-- ❌ May be overkill for simple command sequences
-
----
-
-## 🚀 ADR 12: Strategy Pattern for Rover Movement Logic
+## 🚀 ADR 11: Strategy Pattern for Rover Movement Logic
 
 🟦 **Context**
 We might want to support different movement strategies for various rover types (e.g., standard vs. jumping rovers) and allow future extensibility.
@@ -201,51 +184,6 @@ Implement the **Strategy Pattern** to encapsulate movement algorithms for each t
 - ✅ Follows the Open/Closed Principle, making it easy to add new strategies.
 - ❌ Adds an extra layer of abstraction.
 
----
 
-## 🛠️ ADR 13: Singleton Pattern for Plateau Configuration
 
-🟦 **Context**
-We want a single, globally accessible configuration for the plateau size and grid structure to ensure that changes to the plateau are centralized.
 
-🟩 **Decision**
-Implement the **Singleton Pattern** for `PlateauConfiguration`, ensuring that only one instance of the plateau configuration exists throughout the application.
-
-🟨 **Consequences**
-- ✅ Ensures centralized access to plateau configuration.
-- ✅ Prevents inconsistent or conflicting plateau settings.
-- ✅ Ensures thread safety and memory optimization for configuration.
-- ❌ Can lead to challenges in testing due to global state.
-
----
-
-## 💾 ADR 14: Memento Pattern for Undo Functionality
-
-🟦 **Context**
-There may be scenarios where users want to undo or rollback rover movements to a previous state.
-
-🟩 **Decision**
-Implement the **Memento Pattern** to store snapshots of the rover's state at specific points in time, enabling rollback functionality.
-
-🟨 **Consequences**
-- ✅ Provides easy rollback to previous rover states.
-- ✅ Encapsulates the internal state of the rover without exposing it.
-- ✅ Enhances user experience by supporting undo/redo operations.
-- ❌ Increases memory usage due to state storage.
-- ❌ Requires additional logic to handle state restoration.
-
----
-
-## 🔍 ADR 15: Observer Pattern for Rover Status Monitoring
-
-🟦 **Context**
-We need a way to monitor the status of each rover during simulation, possibly to notify other parts of the system when a rover moves or completes a command sequence.
-
-🟩 **Decision**
-Implement the **Observer Pattern** so that interested components (e.g., visualization module, logging system) can be notified of rover state changes.
-
-🟨 **Consequences**
-- ✅ Enables real-time monitoring of rover movements.
-- ✅ Decouples the rover's movement logic from the observers (like the UI).
-- ✅ Allows future components to easily subscribe to rover events.
-- ❌ Adds complexity to the system by introducing event-driven interaction.

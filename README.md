@@ -172,17 +172,36 @@ This project uses the following dependencies:
 - [🃏 Mockito](https://site.mockito.org/) (org.mockito:mockito-core:5.3.1) for mocking in tests
 - [🐘 Gradle 8.5](https://gradle.org/) as the build tool
 
-## 🏗️ Build and Run
+##  🏗️ Build and Run ( Compilation and Execution )
 
-To build the project:
-```bash
-./gradlew build
-```
+If you prefer to compile and run the project manually, follow these steps:
 
-To run the simulation:
-```bash
-./gradlew run
-```
+1. **Compile the project:** 
+   First, you need to compile the project using Gradle:
+
+   ```bash
+   ./gradlew build
+   ```
+
+2. **Navigate to the compiled classes directory:** 
+   The compiled `.class` files are stored in the `build/classes/java/main` directory:
+
+   ```bash
+   cd build/classes/java/main
+   ```
+
+3. **Run the main class:** 
+   Use the `java` command to run the main class (`MarsRoverApplication`). Ensure you provide the full package name:
+
+   ```bash
+   java com.marsrover.application.MarsRoverApplication
+   ```
+
+### Notes(Alternative way To run the simulation)
+
+- #### Right-click on MarsRoverApplication.java.
+- #### Select Run 'MarsRoverApplication.main()'.
+- #### This will compile and run the Mars Rover simulation
 
 ## 🧪 Testing
 
@@ -427,4 +446,7 @@ We would like to express our gratitude to:
 
 Special thanks to Dr. Läufer for introducing us to advanced software development concepts and practice projects ( introducing us to Mars Rover Problem ).
 
-Thank you for your interest in our Mars Rover Simulation project. We hope you find it useful and educational!
+Thank you for your interest in our Mars Rover Simulation project. We hope you find it useful and educational!    
+
+
+

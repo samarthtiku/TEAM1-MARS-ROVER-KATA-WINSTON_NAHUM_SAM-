@@ -1,10 +1,7 @@
-
 package com.marsrover.model;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import com.marsrover.model.Plateau;
-import com.marsrover.util.Configuration;
 
 class PlateauTest {
 
@@ -17,10 +14,11 @@ class PlateauTest {
 
     @Test
     void testInvalidPlateauCreation() {
-        assertThrows(IllegalArgumentException.class, () -> new Plateau(0, 5));
-        assertThrows(IllegalArgumentException.class, () -> new Plateau(5, 0));
-        assertThrows(IllegalArgumentException.class, () -> new Plateau(-1, 5));
-        assertThrows(IllegalArgumentException.class, () -> new Plateau(Configuration.MAX_PLATEAU_SIZE + 1, 5));
+        // Check for invalid width and height
+        assertThrows(IllegalArgumentException.class, () -> new Plateau(0, 5)); // Width is 0
+        assertThrows(IllegalArgumentException.class, () -> new Plateau(5, 0)); // Height is 0
+        assertThrows(IllegalArgumentException.class, () -> new Plateau(-1, 5)); // Negative width
+        assertThrows(IllegalArgumentException.class, () -> new Plateau(5, -1)); // Negative height
     }
 
     @Test

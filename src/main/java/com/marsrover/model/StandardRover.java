@@ -1,19 +1,29 @@
 package com.marsrover.model;
 
-
 public class StandardRover extends AbstractRover {
+
     public StandardRover(String id, int x, int y, Orientation orientation, Plateau plateau) {
         super(id, x, y, orientation, plateau);
+        if (!plateau.isValidPosition(x, y)) {
+            throw new IllegalArgumentException("Invalid rover position: " + x + ", " + y);
+        }
     }
 
     @Override
     public void processCommands(String commands) {
         for (char command : commands.toUpperCase().replaceAll("\\s", "").toCharArray()) {
             switch (command) {
-                case 'L': turnLeft(); break;
-                case 'R': turnRight(); break;
-                case 'M': move(); break;
-                default: throw new IllegalArgumentException("Invalid command: " + command);
+                case 'L':
+                    turnLeft();
+                    break;
+                case 'R':
+                    turnRight();
+                    break;
+                case 'M':
+                    move();
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid command: " + command);
             }
         }
     }
@@ -34,7 +44,7 @@ public class StandardRover extends AbstractRover {
         }
     }
 
-    // Setter for orientation to be used in tests
+    // Add this method to allow the test cases to change the rover's orientation
     public void setOrientation(Orientation orientation) {
         this.orientation = orientation;
     }

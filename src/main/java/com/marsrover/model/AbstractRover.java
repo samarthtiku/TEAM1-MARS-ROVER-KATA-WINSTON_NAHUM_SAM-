@@ -1,7 +1,5 @@
 package com.marsrover.model;
 
-
-//checking commit
 public abstract class AbstractRover {
     protected int x;
     protected int y;
@@ -32,8 +30,25 @@ public abstract class AbstractRover {
         orientation = orientation.right();
     }
 
+    // Prevent negative coordinates and handle multiple rovers on the same spot
+    protected void moveRover(int newX, int newY) {
+        if (newX >= 0 && newY >= 0 && plateau.isValidPosition(newX, newY) && !plateau.isOccupied(newX, newY)) {
+            plateau.removeRover(x, y);
+            x = newX;
+            y = newY;
+            plateau.placeRover(x, y, id);
+            distanceTraveled++;
+        } else {
+            System.out.println("Invalid move for rover " + id + ". Position out of bounds or occupied.");
+        }
+    }
+
     public String getId() {
         return id;
+    }
+
+    public Orientation getOrientation() {
+        return orientation;
     }
 
     public int getX() {
@@ -44,15 +59,11 @@ public abstract class AbstractRover {
         return y;
     }
 
-    public Orientation getOrientation() {
-        return orientation;
+    public String getPosition() {
+        return x + " " + y + " " + orientation;
     }
 
     public int getDistanceTraveled() {
         return distanceTraveled;
-    }
-
-    public String getPosition() {
-        return x + " " + y + " " + orientation;
     }
 }

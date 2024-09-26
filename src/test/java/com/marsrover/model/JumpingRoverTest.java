@@ -12,8 +12,8 @@ class JumpingRoverTest {
     @BeforeEach
     void setUp() {
         plateau = new Plateau(5, 5);  // Create a 5x5 plateau
-        jumpingRover = new JumpingRover("JUMP1", 1, 2, Orientation.N, plateau);  // Place rover at (1, 2) facing North
-        plateau.placeRover(1, 2, "JUMP1");  // Place rover on plateau grid
+        jumpingRover = new JumpingRover("R1", 1, 2, Orientation.N, plateau);  // Place rover at (1, 2) facing North
+        plateau.placeRover(1, 2, "R1");  // Place rover on plateau grid
     }
 
     @Test
@@ -45,8 +45,8 @@ class JumpingRoverTest {
     @Test
     void testMoveOutOfBounds() {
         // Place rover at the top of the plateau and attempt to move out of bounds
-        jumpingRover = new JumpingRover("JUMP2", 0, 5, Orientation.N, plateau);
-        plateau.placeRover(0, 5, "JUMP2");
+        jumpingRover = new JumpingRover("R2", 0, 5, Orientation.N, plateau);
+        plateau.placeRover(0, 5, "R2");
         jumpingRover.processCommands("M");  // Attempt to move North, which is out of bounds
 
         // Expect the rover to remain at (0, 5)
@@ -57,8 +57,8 @@ class JumpingRoverTest {
     @Test
     void testJumpOutOfBounds() {
         // Place rover at (0, 5) and attempt to jump North out of bounds
-        jumpingRover = new JumpingRover("JUMP2", 0, 5, Orientation.N, plateau);
-        plateau.placeRover(0, 5, "JUMP2");
+        jumpingRover = new JumpingRover("R2", 0, 5, Orientation.N, plateau);
+        plateau.placeRover(0, 5, "R2");
         jumpingRover.processCommands("J");  // Jump North out of bounds
 
         // Expect the rover to remain at (0, 5)
@@ -72,7 +72,7 @@ class JumpingRoverTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             jumpingRover.processCommands("X");  // X is an invalid command
         });
-        String expectedMessage = "Invalid command: X for Rover JUMP1";
+        String expectedMessage = "Invalid command: X for Rover R1";
         assertTrue(exception.getMessage().contains(expectedMessage));
     }
 

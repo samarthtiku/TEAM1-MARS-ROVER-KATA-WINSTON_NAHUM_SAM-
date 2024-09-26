@@ -2,12 +2,11 @@ package com.marsrover.application;
 
 import com.marsrover.model.Plateau;
 import com.marsrover.model.AbstractRover;
+import com.marsrover.model.Orientation;
 import com.marsrover.service.InputHandler;
 import com.marsrover.service.RoverFactory;
 import com.marsrover.util.PlateauVisualizer;
 import com.marsrover.util.Configuration;
-import com.marsrover.model.Orientation;
-
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,7 +44,14 @@ public class MarsRoverProgram {
                 int x = Integer.parseInt(parts[1]);
                 int y = Integer.parseInt(parts[2]);
                 Orientation orientation = Orientation.valueOf(parts[3].toUpperCase());
-                String roverId = "ROVER" + (roverCount + 1);
+
+                // Ensure no negative coordinates
+                if (x < 0 || y < 0) {
+                    System.out.println("Invalid coordinates. Please enter non-negative values.");
+                    continue;
+                }
+
+                String roverId = "R" + (roverCount + 1);
                 AbstractRover rover = roverFactory.createRover(roverId, x, y, orientation, plateau, type);
                 rovers.add(rover);
                 roverCount++;
@@ -57,7 +63,7 @@ public class MarsRoverProgram {
     }
 
     private void controlRovers() throws IOException {
-        System.out.println("Use N (up), W (left), S (down), E (right) to move rovers. Press 'q' to finish a rover's commands.");
+        System.out.println("Use L (left), R (right), M (move) to control rovers. Press 'q' to finish a rover's commands.");
         for (AbstractRover rover : rovers) {
             System.out.println("Controlling " + rover.getId() + ":");
             int attempts = 0;
@@ -68,6 +74,8 @@ public class MarsRoverProgram {
                         break;
                     }
                     rover.processCommands(commands);
+
+                    // Visualize rover's movements
                     PlateauVisualizer.visualize(plateau, rovers);
                     attempts = 0; // Reset attempts on successful command
                 } catch (IllegalArgumentException e) {

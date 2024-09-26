@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.marsrover.application.MarsRoverProgramTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-26T01:31:29" hostname="samarths-Air.attlocal.net" time="1.941">
+<testsuite name="com.marsrover.application.MarsRoverProgramTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-26T02:48:28" hostname="samarths-Air.attlocal.net" time="2.042">
   <properties/>
-  <testcase name="testRun()" classname="com.marsrover.application.MarsRoverProgramTest" time="1.941"/>
+  <testcase name="testRun()" classname="com.marsrover.application.MarsRoverProgramTest" time="2.042"/>
   <system-out><![CDATA[Enter rover type (standard/jumping), position and orientation (type x y N/E/S/W) or 'done' to finish:
-ROVER1 (standard) deployed successfully.
+R1 (standard) deployed successfully.
 Enter rover type (standard/jumping), position and orientation (type x y N/E/S/W) or 'done' to finish:
-Use N (up), W (left), S (down), E (right) to move rovers. Press 'q' to finish a rover's commands.
+Use L (left), R (right), M (move) to control rovers. Press 'q' to finish a rover's commands.
 Controlling null:
 
 Plateau Visualization:
-. 
+.   
 
 Unknown Rover: null, Distance: 0
 
 Plateau Visualization:
-. 
+.   
 
 Unknown Rover: null, Distance: 0
 ]]></system-out>

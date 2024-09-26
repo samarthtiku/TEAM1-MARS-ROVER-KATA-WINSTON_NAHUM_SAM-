@@ -1,11 +1,10 @@
 package com.marsrover.util;
 
+import com.marsrover.model.AbstractRover;
+import com.marsrover.model.Plateau;
+
 import java.util.List;
 import java.util.Map;
-import com.marsrover.model.Plateau;
-import com.marsrover.model.AbstractRover;
-
-
 
 public class PlateauVisualizer {
     private static final String ANSI_RESET = "\u001B[0m";
@@ -28,13 +27,12 @@ public class PlateauVisualizer {
                 if (grid.containsKey(key)) {
                     String roverId = grid.get(key);
                     if (roverId != null) {
-                        System.out.print(getColorCode(roverId) + roverId + " " + ANSI_RESET);
+                        System.out.print(getColorCode(roverId) + getArrow(roverId, rovers) + "   " + ANSI_RESET);  // Visualize arrows
                     } else {
-                        // Handle null roverId
-                        System.out.print(". ");
+                        System.out.print(".   ");  // More space between grids
                     }
                 } else {
-                    System.out.print(". ");
+                    System.out.print(".   ");  // More space between grids
                 }
             }
             System.out.println();
@@ -50,6 +48,20 @@ public class PlateauVisualizer {
                         ", Distance: " + rover.getDistanceTraveled());
             }
         }
+    }
+
+    private static String getArrow(String roverId, List<AbstractRover> rovers) {
+        for (AbstractRover rover : rovers) {
+            if (rover.getId().equals(roverId)) {
+                switch (rover.getOrientation()) {
+                    case N: return "↑";
+                    case S: return "↓";
+                    case E: return "→";
+                    case W: return "←";
+                }
+            }
+        }
+        return " ";  // Default if no match found
     }
 
     private static String getColorCode(String roverId) {

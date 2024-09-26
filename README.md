@@ -292,23 +292,6 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
   - For example, `StandardMovementStrategy` for standard rovers and `JumpingMovementStrategy` for jumping rovers.
   - Simplifies the `Rover` class by delegating movement behavior, making it easy to add new strategies.
 
-- **Singleton Pattern**: 
-  - Used for `PlateauConfiguration` to ensure only one instance of the plateau configuration exists.
-  - Prevents inconsistent or conflicting settings across the application and optimizes memory usage.
-
-- **Memento Pattern**: 
-  - Enables undo/redo functionality by storing snapshots of rover states at specific points in time.
-  - Encapsulates the rover's internal state without exposing it, enhancing user experience for error recovery.
-
-- **Observer Pattern**: 
-  - Allows real-time monitoring of rover status changes during simulation.
-  - Decouples rover movement logic from the rest of the system, making it easy to add new components like a visualization module or logging.
-
-- **Iterator Pattern**: 
-  - Processes sequences of rover movement commands in a standardized way.
-  - Separates command traversal from the underlying command representation, ensuring clean and efficient command execution.
-
-
 ### 🧱 SOLID Principles
 1. **Single Responsibility Principle**: Each class has a well-defined purpose.
 2. **Open/Closed Principle**: System is open for extension but closed for modification.
@@ -430,9 +413,9 @@ SOFTWARE.
 
 If you have any questions, issues, or suggestions regarding the Mars Rover Simulation project, please feel free to contact us:
 
-- Winston - [Email](winstonessibu@gmail.com)
+- Winston - [Email](mailto:winstonessibu@gmail.com)
 - Nahum - [Email](mailto:nahumguess@gmail.com)
-- Samarth Tiku - [Email](mailto:samarth.tiku@example.com)
+- Samarth Tiku - [Email](mailto:samarthtiku98@gmail.com)
 
 You can also open an issue on our [GitHub repository](https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/issues) for bug reports or feature requests.
 

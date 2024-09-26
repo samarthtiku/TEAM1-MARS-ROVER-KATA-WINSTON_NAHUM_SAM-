@@ -1,282 +1,251 @@
-//ADR TESTING
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAM 1 Mars Rover Simulation ADR</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f4f8;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        h2 {
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        .section {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .pros {
-            color: #27ae60;
-        }
-        .cons {
-            color: #c0392b;
-        }
-        .neutral {
-            color: #f39c12;
-        }
-        .collapsible {
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-            border-radius: 8px 8px 0 0;
-        }
-        .active, .collapsible:hover {
-            background-color: #2980b9;
-        }
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #f1f1f1;
-            border-radius: 0 0 8px 8px;
-        }
-        .edit-btn {
-            background-color: #2ecc71;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-    </style>
-</head>
-<body>
-<h1>TEAM 1 Mars Rover Simulation ADR</h1>
+# 📐 Architecture Decision Record (ADR)
 
-<div class="section">
-    <h2>Metadata</h2>
-    <table id="metadataTable">
-        <tr>
-            <th>Field</th>
-            <th>Value</th>
-        </tr>
-        <tr>
-            <td>Status</td>
-            <td contenteditable="true">Proposed</td>
-        </tr>
-        <tr>
-            <td>Dates</td>
-            <td contenteditable="true"></td>
-        </tr>
-        <tr>
-            <td>Decision-makers</td>
-            <td contenteditable="true">Winston, Nahum, Samarth</td>
-        </tr>
-        <tr>
-            <td>Consulted</td>
-            <td contenteditable="true"></td>
-        </tr>
-        <tr>
-            <td>Informed</td>
-            <td contenteditable="true"></td>
-        </tr>
-    </table>
-</div>
+## 🏗️ ADR 1: Layered Architecture
 
-<div class="section">
-    <h2>Context and Problem Statement</h2>
-    <p contenteditable="true">
-        As Team 1, we are working on the mars-rover-kata project, which involves Test-Driven Development (TDD) using the Thoughtworks mars-rover problem. The problem involves navigating robotic rovers on a rectangular plateau on Mars. The rovers' positions are represented by x and y coordinates and a direction (N, E, S, W). They can be controlled through simple commands: 'L' (turn left), 'R' (turn right), and 'M' (move forward).
+🟦 **Context**
+We need a clear structure for our Mars Rover Simulation that separates concerns and allows for easy maintenance and extension.
 
-        Our task is to implement a solution that can process a series of these commands for multiple rovers and output their final positions. This project serves as a team exercise to practice collaborative software development, software architecture and design concepts, and test-driven development.
+🟩 **Decision**
+Implement a layered architecture with the following layers:
+1. Application Layer (`application` package)
+2. Model Layer (`model` package)
+3. Service Layer (`service` package)
+4. Utility Layer (`util` package)
 
-        Key aspects of the problem include:
-        1. Defining the plateau's dimensions
-        2. Initializing rovers with their starting positions and orientations
-        3. Processing movement commands for each rover sequentially
-        4. Ensuring rovers don't move outside the plateau boundaries
-        5. Outputting the final positions of all rovers
+🟨 **Consequences**
+- ✅ Clear separation of concerns
+- ✅ Easier to maintain and extend
+- ✅ Facilitates unit testing
+- ❌ Might introduce some overhead for smaller functions
 
-        As a team project, we need to make architectural decisions that will allow for efficient development, easy maintenance, and potential future enhancements.
-    </p>
-</div>
+---
 
-<div class="section">
-    <h2>Decision Drivers</h2>
-    <ul id="decisionDrivers" contenteditable="true">
-        <li>Code maintainability and readability</li>
-        <li>Extensibility for future features</li>
-        <li>Performance considerations</li>
-        <li>Adherence to object-oriented design principles</li>
-        <li>Testability of the codebase</li>
-    </ul>
-</div>
+## 🤖 ADR 2: Rover Abstraction
 
-<div class="section">
-    <h2>Decisions</h2>
-    <div id="optionsDetails">
-        <div>
-            <button class="collapsible">Decision 1: Use of Enum for Orientation</button>
-            <div class="content">
-                <p contenteditable="true">We will use an Enum class to represent the cardinal directions (N, E, S, W) for the rover's orientation.</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it provides type safety and prevents invalid orientations</li>
-                    <li class="pros">Good, because it allows for easy implementation of left and right turns</li>
-                    <li class="cons">Bad, because it might be less flexible if we need to add diagonal directions in the future</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <button class="collapsible">Decision 2: Immutable Plateau Class</button>
-            <div class="content">
-                <p contenteditable="true">The Plateau class will be implemented as an immutable class with final fields for width and height.</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it ensures the plateau size cannot be accidentally changed during runtime</li>
-                    <li class="pros">Good, because it simplifies reasoning about the code and prevents certain bugs</li>
-                    <li class="cons">Bad, because it might limit flexibility if dynamic resizing of the plateau is needed in the future</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <button class="collapsible">Decision 3: Command Pattern for Rover Movement</button>
-            <div class="content">
-                <p contenteditable="true">We will use the Command pattern to implement the rover's movement and rotation commands (L, R, M).</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it allows for easy addition of new commands in the future</li>
-                    <li class="pros">Good, because it separates the command logic from the Rover class, adhering to the Single Responsibility Principle</li>
-                    <li class="cons">Bad, because it adds some complexity to the codebase</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <button class="collapsible">Decision 4: Use of Exceptions for Error Handling</button>
-            <div class="content">
-                <p contenteditable="true">We will use custom exceptions (IllegalArgumentException, IllegalStateException) for handling error scenarios such as invalid input or out-of-bounds movement.</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it provides clear and specific error messages</li>
-                    <li class="pros">Good, because it allows for centralized error handling in the main program</li>
-                    <li class="cons">Bad, because excessive use of exceptions might impact performance if errors are frequent</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <button class="collapsible">Decision 5: Use of Strategy Pattern for Movement Calculation</button>
-            <div class="content">
-                <p contenteditable="true">We will implement a Strategy pattern for calculating new positions based on the current orientation.</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it allows for easy modification of movement logic if requirements change</li>
-                    <li class="pros">Good, because it separates movement calculation from the Rover class, improving maintainability</li>
-                    <li class="cons">Bad, because it might be overkill for the current simple movement logic</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <button class="collapsible">Decision 6: Implementation of a RoverUtilities Class</button>
-            <div class="content">
-                <p contenteditable="true">We will create a RoverUtilities class to handle common operations and calculations, such as distance traveled.</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it centralizes common utility functions</li>
-                    <li class="pros">Good, because it can be easily extended to include more utility functions in the future</li>
-                    <li class="cons">Bad, because it might lead to a "god class" if not carefully managed</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <button class="collapsible">Decision 7: Use of ANSI Color Codes for Console Output</button>
-            <div class="content">
-                <p contenteditable="true">We will use ANSI color codes to enhance the console output of the simulation.</p>
-                <ul contenteditable="true">
-                    <li class="pros">Good, because it improves the user experience by making the output more readable</li>
-                    <li class="pros">Good, because it allows for visual differentiation of different types of information</li>
-                    <li class="cons">Bad, because it might not work on all console environments</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+🟦 **Context**
+We need to support different types of rovers with varying capabilities.
 
-<div class="section">
-    <h2>More Information</h2>
-    <p contenteditable="true">The implementation details can be found in the provided Java files. Further decisions may be needed as the project evolves, particularly regarding the handling of multiple rovers, obstacle detection, and more complex command sequences.</p>
-</div>
+🟩 **Decision**
+Create an `AbstractRover` class as a base for all rover types, with `StandardRover` and `JumpingRover` as concrete implementations.
 
-<script>
-    // Set up collapsible sections
-    var coll = document.getElementsByClassName('collapsible');
-    for (var i = 0; i < coll.length; i++) {
-        coll[i].addEventListener('click', function() {
-            this.classList.toggle('active');
-            var content = this.nextElementSibling;
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-            } else {
-                content.style.display = 'block';
-            }
-        });
-    }
-</script>
-</body>
-</html>
+🟨 **Consequences**
+- ✅ Allows for easy addition of new rover types
+- ✅ Encapsulates common rover behavior
+- ✅ Supports polymorphism in rover handling
+- ❌ Might lead to some code duplication in concrete classes
 
+---
 
+## 🏭 ADR 3: Factory Pattern for Rover Creation
 
-# TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-
-# Time Log - September 8, 2024 6:38 pm
-# Time Log - September 9, 2024 3:48 pm(Notes for Tested Input and Expected Output )
-# Time Log - September 10, 2024 9 am(Added Nahum's approach as well as some starter code)
-# Time Log - September 12, 2024 6 pm(Added github actions to the project)
-# Time Log - September 14, 2024 (Created Rover class : added processCommands and getPosition methods.. & fixed some bug )
-# Time Log - September 16, 2024 10 pm(Filled in methods in rover class)
-# Time Log - September 16, 2024 11pm (Notes on breaking down of our MARS ROVER project structure & Calculating the total distance traveled by a rover )
-# Time Log - September 17, 2024 9:24 am ( Adding simulation of Mars Rover( will update it later  )) 
-# Time Log - September 22, 2024  All Day
-# Time Log - September 23, 2024  5am - 8am
+🟦 **Context**
+We need a flexible way to create different types of rovers.
+
+🟩 **Decision**
+Implement a `RoverFactory` interface and `RoverFactoryImpl` class to handle rover creation.
+
+🟨 **Consequences**
+- ✅ Centralizes rover creation logic
+- ✅ Makes it easy to add new rover types
+- ✅ Adheres to the Open/Closed principle
+- ❌ Adds an extra layer of abstraction
+
+---
+
+## 🎨 ADR 4: Command Pattern for Rover Movement
+
+🟦 **Context**
+We need a flexible system to handle different rover movement commands.
+
+🟩 **Decision**
+Implement the **Command Pattern** for rover movements (L, R, M).
+
+🟨 **Consequences**
+- ✅ Encapsulates each command as an object
+- ✅ Allows for easy addition of new commands
+- ✅ Facilitates undo/redo functionality if needed
+- ❌ Increases the number of classes in the system
+
+---
+
+## 🧪 ADR 5: Test-Driven Development (TDD)
+
+🟦 **Context**
+We need to ensure the reliability and correctness of our simulation.
+
+🟩 **Decision**
+Adopt Test-Driven Development using JUnit 5 and Mockito for testing.
+
+🟨 **Consequences**
+- ✅ Ensures high test coverage
+- ✅ Improves design by considering usage before implementation
+- ✅ Facilitates refactoring and maintenance
+- ❌ May initially slow down development process
+
+---
+
+## 🔄 ADR 6: Continuous Integration with GitHub Actions
+
+🟦 **Context**
+We need to ensure code quality and automate the build and test process.
+
+🟩 **Decision**
+Implement CI/CD using GitHub Actions.
+
+🟨 **Consequences**
+- ✅ Automates build and test processes
+- ✅ Catches integration issues early
+- ✅ Ensures consistent build environment
+- ❌ Requires maintenance of CI/CD configuration
+
+---
+
+## 🖥️ ADR 7: ANSI Escape Codes for Visualization
+
+🟦 **Context**
+We need an engaging way to visualize the plateau and rover positions in the console output.
+
+🟩 **Decision**
+Implement visualization using ANSI escape codes for colorful and formatted console output.
+
+🟨 **Consequences**
+- ✅ Provides a visually appealing representation of the simulation
+- ✅ Enhances user experience and understanding of rover movements
+- ✅ Allows for easy differentiation between rover types and states
+- ❌ May not work in all console environments
+- ❌ Requires additional logic to handle color and formatting
+
+---
+
+## 🚫 ADR 8: Exception Handling and Input Validation
+
+🟦 **Context**
+We need a robust way to handle errors and invalid inputs to ensure the simulation's reliability.
+
+🟩 **Decision**
+Implement a comprehensive exception handling system and thorough input validation throughout the application.
+
+🟨 **Consequences**
+- ✅ Improves application stability and user experience
+- ✅ Provides clear feedback on error conditions
+- ✅ Facilitates debugging and troubleshooting
+- ❌ Increases code complexity
+- ❌ Requires additional testing scenarios
+
+---
+
+## 🗺️ ADR 9: Immutable Plateau Representation
+
+🟦 **Context**
+We need an efficient and thread-safe way to represent the Mars plateau.
+
+🟩 **Decision**
+Implement the `Plateau` class as an immutable object with a fixed size and grid representation.
+
+🟨 **Consequences**
+- ✅ Ensures thread safety in potential multi-threaded scenarios
+- ✅ Simplifies reasoning about the plateau state
+- ✅ Prevents accidental modifications to the plateau size
+- ❌ May require creating new plateau instances for different scenarios
+- ❌ Limits flexibility for dynamic plateau modifications
+
+---
+
+## 🔢 ADR 10: Enum for Orientation Representation
+
+🟦 **Context**
+We need a clear and type-safe way to represent and manipulate rover orientations.
+
+🟩 **Decision**
+Use an **Enum** to represent the four cardinal directions (N, E, S, W) and include methods for rotation.
+
+🟨 **Consequences**
+- ✅ Provides type safety and prevents invalid orientations
+- ✅ Encapsulates rotation logic within the Enum
+- ✅ Improves code readability and maintainability
+- ❌ Limited to predefined set of orientations
+- ❌ May require changes if diagonal movements are introduced in the future
+
+---
+
+## 🔄 ADR 11: Iterator Pattern for Command Processing
+
+🟦 **Context**
+We need an efficient way to process a sequence of commands for each rover.
+
+🟩 **Decision**
+Implement the **Iterator Pattern** to process the sequence of movement commands.
+
+🟨 **Consequences**
+- ✅ Provides a standardized way to traverse the command sequence
+- ✅ Allows for easy extension to support different command sources (e.g., file, network)
+- ✅ Separates the traversal of commands from the underlying representation
+- ❌ Adds some complexity to the command processing logic
+- ❌ May be overkill for simple command sequences
+
+---
+
+## 🚀 ADR 12: Strategy Pattern for Rover Movement Logic
+
+🟦 **Context**
+We might want to support different movement strategies for various rover types (e.g., standard vs. jumping rovers) and allow future extensibility.
+
+🟩 **Decision**
+Implement the **Strategy Pattern** to encapsulate movement algorithms for each type of rover:
+- `StandardMovementStrategy` for standard rovers.
+- `JumpingMovementStrategy` for jumping rovers.
+
+🟨 **Consequences**
+- ✅ Allows flexible addition of new movement types.
+- ✅ Simplifies the `Rover` class by delegating movement behavior.
+- ✅ Follows the Open/Closed Principle, making it easy to add new strategies.
+- ❌ Adds an extra layer of abstraction.
+
+---
+
+## 🛠️ ADR 13: Singleton Pattern for Plateau Configuration
+
+🟦 **Context**
+We want a single, globally accessible configuration for the plateau size and grid structure to ensure that changes to the plateau are centralized.
+
+🟩 **Decision**
+Implement the **Singleton Pattern** for `PlateauConfiguration`, ensuring that only one instance of the plateau configuration exists throughout the application.
+
+🟨 **Consequences**
+- ✅ Ensures centralized access to plateau configuration.
+- ✅ Prevents inconsistent or conflicting plateau settings.
+- ✅ Ensures thread safety and memory optimization for configuration.
+- ❌ Can lead to challenges in testing due to global state.
+
+---
+
+## 💾 ADR 14: Memento Pattern for Undo Functionality
+
+🟦 **Context**
+There may be scenarios where users want to undo or rollback rover movements to a previous state.
+
+🟩 **Decision**
+Implement the **Memento Pattern** to store snapshots of the rover's state at specific points in time, enabling rollback functionality.
+
+🟨 **Consequences**
+- ✅ Provides easy rollback to previous rover states.
+- ✅ Encapsulates the internal state of the rover without exposing it.
+- ✅ Enhances user experience by supporting undo/redo operations.
+- ❌ Increases memory usage due to state storage.
+- ❌ Requires additional logic to handle state restoration.
+
+---
+
+## 🔍 ADR 15: Observer Pattern for Rover Status Monitoring
+
+🟦 **Context**
+We need a way to monitor the status of each rover during simulation, possibly to notify other parts of the system when a rover moves or completes a command sequence.
+
+🟩 **Decision**
+Implement the **Observer Pattern** so that interested components (e.g., visualization module, logging system) can be notified of rover state changes.
+
+🟨 **Consequences**
+- ✅ Enables real-time monitoring of rover movements.
+- ✅ Decouples the rover's movement logic from the observers (like the UI).
+- ✅ Allows future components to easily subscribe to rover events.
+- ❌ Adds complexity to the system by introducing event-driven interaction.

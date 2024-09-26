@@ -259,20 +259,43 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
 3. **Polymorphism**: Different rover types can be used interchangeably.
 4. **Abstraction**: `AbstractRover` provides a common interface for all rover types.
 
-###🎨 Design Patterns
-**Factory Pattern: Implemented in RoverFactory and RoverFactoryImpl to handle the creation of different types of rovers (e.g., StandardRover, JumpingRover). This pattern centralizes rover creation logic, ensuring flexibility for adding new rover types in the future. It adheres to the Open/Closed Principle by allowing the addition of new rover types without modifying existing code.
+Here’s the **Design Patterns** section formatted in a README-friendly style:
 
-**Command Pattern: Used to encapsulate rover movement commands (L, R, M) as separate objects. This allows for flexible execution of rover commands and facilitates potential future extensions, such as undo/redo functionality. By treating commands as objects, the pattern enhances modularity and simplifies the handling of multiple command sequences.
+---
 
-**Strategy Pattern: Implemented to handle different movement algorithms for various rover types. For example, StandardMovementStrategy for standard rovers and JumpingMovementStrategy for jumping rovers. This pattern simplifies the Rover class by delegating movement behavior and follows the Open/Closed Principle, making it easy to add new movement types.
+## 🎨 Design Patterns
 
-**Singleton Pattern: Used for the PlateauConfiguration to ensure that only one instance of the plateau configuration exists across the application. This pattern centralizes access to the plateau's configuration and prevents inconsistencies or conflicting settings.
+- **Factory Pattern**: 
+  - Implemented in `RoverFactory` and `RoverFactoryImpl`.
+  - Centralizes the creation of different types of rovers (e.g., `StandardRover`, `JumpingRover`).
+  - Ensures flexibility for adding new rover types without modifying existing code, following the **Open/Closed Principle**.
 
-**Memento Pattern: Implemented to store snapshots of the rover’s state at specific points in time, enabling rollback functionality. This pattern supports undo/redo operations, encapsulating the rover's internal state without exposing it, which improves the user experience when dealing with errors or missteps in rover movements.
+- **Command Pattern**: 
+  - Used to implement rover movement commands (`L`, `R`, `M`) as separate objects.
+  - Encapsulates each command, making it easy to manage command sequences and extend with new commands.
+  - Facilitates future enhancements like undo/redo functionality.
 
-**Observer Pattern: Implemented to monitor rover status changes during the simulation. This pattern allows other components (e.g., the visualization module or logging system) to be notified when a rover completes a move or a sequence of commands. It decouples rover movement from other system components, allowing future enhancements like real-time updates without modifying the rover logic.
+- **Strategy Pattern**: 
+  - Handles different movement algorithms for various rover types.
+  - For example, `StandardMovementStrategy` for standard rovers and `JumpingMovementStrategy` for jumping rovers.
+  - Simplifies the `Rover` class by delegating movement behavior, making it easy to add new strategies.
 
-**Iterator Pattern: Used for processing sequences of movement commands for rovers. This pattern provides a standardized way to traverse the commands, ensuring clean separation between the command traversal and the underlying representation of the command sequence
+- **Singleton Pattern**: 
+  - Used for `PlateauConfiguration` to ensure only one instance of the plateau configuration exists.
+  - Prevents inconsistent or conflicting settings across the application and optimizes memory usage.
+
+- **Memento Pattern**: 
+  - Enables undo/redo functionality by storing snapshots of rover states at specific points in time.
+  - Encapsulates the rover's internal state without exposing it, enhancing user experience for error recovery.
+
+- **Observer Pattern**: 
+  - Allows real-time monitoring of rover status changes during simulation.
+  - Decouples rover movement logic from the rest of the system, making it easy to add new components like a visualization module or logging.
+
+- **Iterator Pattern**: 
+  - Processes sequences of rover movement commands in a standardized way.
+  - Separates command traversal from the underlying command representation, ensuring clean and efficient command execution.
+
 
 ### 🧱 SOLID Principles
 1. **Single Responsibility Principle**: Each class has a well-defined purpose.

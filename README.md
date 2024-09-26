@@ -118,7 +118,7 @@ Legend:
 ## 👥 Team Members
 This project was developed collaboratively by:
 
-1. **Winston** - [GitHub Profile](https://github.com/winston) <!-- Replace with actual GitHub profile link -->
+1. **Winston** - [GitHub Profile](https://github.com/kvngwinston) <!-- Replace with actual GitHub profile link -->
 2. **Nahum** - [GitHub Profile](https://github.com/nahumguess) <!-- Replace with actual GitHub profile link -->
 3. **Samarth Tiku** - [GitHub Profile](https://github.com/samarthtiku)
 
@@ -411,7 +411,7 @@ SOFTWARE.
 
 If you have any questions, issues, or suggestions regarding the Mars Rover Simulation project, please feel free to contact us:
 
-- Winston - [Email](mailto:winston@example.com)
+- Winston - [Email](winstonessibu@gmail.com)
 - Nahum - [Email](mailto:nahum@example.com)
 - Samarth Tiku - [Email](mailto:samarth.tiku@example.com)
 

@@ -412,7 +412,7 @@ SOFTWARE.
 If you have any questions, issues, or suggestions regarding the Mars Rover Simulation project, please feel free to contact us:
 
 - Winston - [Email](mailto:winston@example.com)
-- Nahum - [Email](mailto:nahum@example.com)
+- Nahum - [Email](nahumguess@gmail.com)
 - Samarth Tiku - [Email](mailto:samarth.tiku@example.com)
 
 You can also open an issue on our [GitHub repository](https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/issues) for bug reports or feature requests.

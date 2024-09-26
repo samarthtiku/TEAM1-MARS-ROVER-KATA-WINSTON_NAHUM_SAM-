@@ -20,7 +20,7 @@
 17. [License](#-license)
 
 ## 🌟 Project Overview
-The Mars Rover Simulation is an advanced implementation of the classic Thoughtworks Mars Rover problem. Our team has taken the original challenge and significantly expanded upon it, creating a robust and feature-rich simulation that goes beyond the basic requirements.
+Our Mars Rover Project is an advanced implementation of the classic Thoughtworks Mars Rover problem. Our team has taken the original challenge and significantly expanded it, creating a robust and feature-rich simulation that exceeds the basic requirements.
 
 ## 🎯 Original Thoughtworks Problem
 As described by [danilsuits](https://danilsuits.github.io/mars-rover-kata/):
@@ -439,6 +439,6 @@ We would like to express our gratitude to:
 - Our instructor, Dr. Konstantin Läufer ([@klaeufer](https://github.com/klaeufer)), for his invaluable guidance, support, and expertise.
 - The open-source community for the various tools and libraries that made this project possible
 
-Special thanks to Dr. Läufer for introducing us to advanced software development concepts and practicesproject.
+Special thanks to Dr. Läufer for introducing us to advanced software development concepts and practice projects ( introducing us to Mars Rover Problem ).
 
 Thank you for your interest in our Mars Rover Simulation project. We hope you find it useful and educational!

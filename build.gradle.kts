@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     // Explicitly override the vulnerable Guava version
-    implementation("com.google.guava:guava:31.1-jre") // Updated to a secure version of Guava
+    implementation("com.google.guava:guava:32.0.0-android") // Updated to a secure version of Guava
 
     // JUnit 5 for testing
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")

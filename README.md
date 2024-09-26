@@ -259,10 +259,20 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
 3. **Polymorphism**: Different rover types can be used interchangeably.
 4. **Abstraction**: `AbstractRover` provides a common interface for all rover types.
 
-### 🎨 Design Patterns
-1. **Factory Pattern**: Implemented in `RoverFactory` and `RoverFactoryImpl`.
-2. **Command Pattern**: Used for implementing rover movement commands.
-3. **Strategy Pattern**: Potentially used for different movement strategies.
+###🎨 Design Patterns
+**Factory Pattern: Implemented in RoverFactory and RoverFactoryImpl to handle the creation of different types of rovers (e.g., StandardRover, JumpingRover). This pattern centralizes rover creation logic, ensuring flexibility for adding new rover types in the future. It adheres to the Open/Closed Principle by allowing the addition of new rover types without modifying existing code.
+
+**Command Pattern: Used to encapsulate rover movement commands (L, R, M) as separate objects. This allows for flexible execution of rover commands and facilitates potential future extensions, such as undo/redo functionality. By treating commands as objects, the pattern enhances modularity and simplifies the handling of multiple command sequences.
+
+**Strategy Pattern: Implemented to handle different movement algorithms for various rover types. For example, StandardMovementStrategy for standard rovers and JumpingMovementStrategy for jumping rovers. This pattern simplifies the Rover class by delegating movement behavior and follows the Open/Closed Principle, making it easy to add new movement types.
+
+**Singleton Pattern: Used for the PlateauConfiguration to ensure that only one instance of the plateau configuration exists across the application. This pattern centralizes access to the plateau's configuration and prevents inconsistencies or conflicting settings.
+
+**Memento Pattern: Implemented to store snapshots of the rover’s state at specific points in time, enabling rollback functionality. This pattern supports undo/redo operations, encapsulating the rover's internal state without exposing it, which improves the user experience when dealing with errors or missteps in rover movements.
+
+**Observer Pattern: Implemented to monitor rover status changes during the simulation. This pattern allows other components (e.g., the visualization module or logging system) to be notified when a rover completes a move or a sequence of commands. It decouples rover movement from other system components, allowing future enhancements like real-time updates without modifying the rover logic.
+
+**Iterator Pattern: Used for processing sequences of movement commands for rovers. This pattern provides a standardized way to traverse the commands, ensuring clean separation between the command traversal and the underlying representation of the command sequence
 
 ### 🧱 SOLID Principles
 1. **Single Responsibility Principle**: Each class has a well-defined purpose.
@@ -290,7 +300,6 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
 1. **Command-Line Interface (CLI)**: For user input and output.
 2. **ANSI Escape Codes**: For colorful and formatted console output.
 
-[... Previous sections remain unchanged ...]
 
 ## 🤝 Contributing
 We welcome contributions to the Mars Rover Simulation project! Here's how you can contribute:
@@ -360,7 +369,7 @@ If you have any questions, issues, or suggestions regarding the Mars Rover Simul
 - Samarth Tiku - [Email](mailto:samarthtiku98@gmail.com)
 
 You can also open an issue on our [GitHub repository](https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/issues) for bug reports or feature requests.
-[... Previous sections remain unchanged ...]
+
 
 ## 🤝 Contributing
 We welcome contributions to the Mars Rover Simulation project! Here's how you can contribute:

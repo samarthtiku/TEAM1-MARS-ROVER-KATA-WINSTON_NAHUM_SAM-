@@ -172,9 +172,6 @@ This project uses the following dependencies:
 - [🃏 Mockito](https://site.mockito.org/) (org.mockito:mockito-core:5.3.1) for mocking in tests
 - [🐘 Gradle 8.5](https://gradle.org/) as the build tool
 
-### Manual Dependencies
-- None (All dependencies are managed through Gradle)
-
 ## 🏗️ Build and Run
 
 To build the project:
@@ -258,10 +255,6 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
 2. **Inheritance**: Rover hierarchy with `AbstractRover` as the base class.
 3. **Polymorphism**: Different rover types can be used interchangeably.
 4. **Abstraction**: `AbstractRover` provides a common interface for all rover types.
-
-Here’s the **Design Patterns** section formatted in a README-friendly style:
-
----
 
 ## 🎨 Design Patterns
 

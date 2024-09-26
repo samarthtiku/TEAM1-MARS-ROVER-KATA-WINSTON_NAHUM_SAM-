@@ -1,2 +1,0 @@
--	-	/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/capture_target.tmp.UBHpTl
--	-	/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/capture_target.tmp.h1E9Uv

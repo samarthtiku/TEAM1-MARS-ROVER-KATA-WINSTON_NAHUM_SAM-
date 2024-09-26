@@ -1,42 +1,43 @@
-[64676][      debug] Sqlite write daemon: starting up
-[64676][      debug] Sqlite write daemon: set up complete, waiting for connections
-[64679][      debug] Sqlite write daemon: process starting, pid= 64679
-[64676][environment] CWD = /Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM
-[64676][environment] No .inferconfig file found
-[64676][environment] Project root = /Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM
-[64676][environment] INFER_ARGS =   --progress-bar-style multiline
-[64676][environment] command line arguments:   infer -- ./gradlew build
-[64676][environment] Could not retrieve available memory (possibly not on Linux)
-[64676][environment] Active checkers: self-in-block (C/C++/ObjC), parameter-not-null-checked (C/C++/ObjC), starvation (C/C++/ObjC, Java), siof (C/C++/ObjC), racerd (C/C++/ObjC, C#/.Net, Java), pulse (C/C++/ObjC, C#/.Net, Erlang, Hack, Java, Python), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java)
-[64676][environment] Scheduler: restart
-[64676][environment] Cores used: 8
-[64676][environment] Infer version v1.2.0-86294e13b2
-[64676][environment] Copyright 2009 - present Facebook. All Rights Reserved.
-[64676][environment] 
-[64676][   progress] Capturing in gradle mode...
-[64676][   progress] javac-stderr: javac 17.0.10
-[64676][environment] openjdk version "17.0.10" 2024-01-16
+[16050][      debug] Sqlite write daemon: starting up
+[16050][      debug] Sqlite write daemon: set up complete, waiting for connections
+[16053][      debug] Sqlite write daemon: process starting, pid= 16053
+[16050][environment] CWD = /Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM
+[16050][environment] No .inferconfig file found
+[16050][environment] Project root = /Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM
+[16050][environment] INFER_ARGS =   @/var/folders/b4/t70qyq954ds_hww6gb_kmb800000gn/T/args.tmp.200918
+[16050][environment]                --progress-bar-style multiline
+[16050][environment] command line arguments:   infer run -- ./gradlew build
+[16050][environment] Could not retrieve available memory (possibly not on Linux)
+[16050][environment] Active checkers: self-in-block (C/C++/ObjC), parameter-not-null-checked (C/C++/ObjC), starvation (C/C++/ObjC, Java), siof (C/C++/ObjC), racerd (C/C++/ObjC, C#/.Net, Java), pulse (C/C++/ObjC, C#/.Net, Erlang, Hack, Java, Python), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java)
+[16050][environment] Scheduler: restart
+[16050][environment] Cores used: 8
+[16050][environment] Infer version v1.2.0-86294e13b2
+[16050][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[16050][environment] 
+[16050][   progress] Capturing in gradle mode...
+[16050][   progress] javac-stderr: javac 17.0.10
+[16050][environment] openjdk version "17.0.10" 2024-01-16
 OpenJDK Runtime Environment Temurin-17.0.10+7 (build 17.0.10+7)
 OpenJDK 64-Bit Server VM Temurin-17.0.10+7 (build 17.0.10+7, mixed mode)
   
 ------------------------------------------------------------
-Gradle 8.4
+Gradle 8.5
 ------------------------------------------------------------
 
-Build time:   2023-10-04 20:52:13 UTC
-Revision:     e9251e572c9bd1d01e503a0dfdf43aedaeecdc3f
+Build time:   2023-11-29 14:08:57 UTC
+Revision:     28aca86a7180baa17117e0e5ba01d8ea9feca598
 
-Kotlin:       1.9.10
+Kotlin:       1.9.20
 Groovy:       3.0.17
 Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
 JVM:          17.0.10 (Eclipse Adoptium 17.0.10+7)
 OS:           Mac OS X 14.6 x86_64
 
 
-[64676][environment] 
-[64676][   progress] [GRADLE] ./gradlew --debug build >'/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/gradle_output.tmp.9608f0.log'
-[64676][   progress] [GRADLE] running gradle took 3.82s
-[64676][   progress] 
+[16050][environment] 
+[16050][   progress] [GRADLE] ./gradlew --debug build >'/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/gradle_output.tmp.f27aa3.log'
+[16050][   progress] [GRADLE] running gradle took 2.4s
+[16050][   progress] 
 
 
 
@@ -44,329 +45,69 @@ OS:           Mac OS X 14.6 x86_64
 
 
 
-
-
-[64733][      debug] Current working directory: '/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM'
-[64733][      debug] Trying to execute: javac '-J-Duser.language=en' '@/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/gradle_files.tmp.bbaada' '@/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/java_opts.tmp.241692' '@/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/capture_target.tmp.h1E9Uv/tmp/javac_args.tmp.b369ee' 2>'/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/capture_target.tmp.h1E9Uv/tmp/javac.tmp.c941ec.out'
-[64732][      debug] Current working directory: '/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM'
-[64732][      debug] Trying to execute: javac '-J-Duser.language=en' '@/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/gradle_files.tmp.41cddd' '@/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/java_opts.tmp.bbaada' '@/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/capture_target.tmp.UBHpTl/tmp/javac_args.tmp.e97d1d' 2>'/Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out/tmp/capture_target.tmp.UBHpTl/tmp/javac.tmp.ad9a3e.out'
-[64732][      debug] *** Success. Logs:
-[64732][      debug] Translating 5 source files (6 classes)
-[64733][      debug] *** Success. Logs:
-[64733][      debug] Translating 4 source files (4 classes)
-[64733][ intern err] Found inconsistent types for java.lang.String.value
-	classpath: signed char[_*_](*)
-	models: unsigned short[_*_](*)
-
-
-[64733][      debug] Global tenv size global_tenv_size_mb: 0
-[64733][      debug] done capturing all files
-[64733][      debug] GC stats for capture:
-[64733][      debug]   minor_words: 1.33945e+07
-[64733][      debug]   promoted_words: 1.85935e+06
-[64733][      debug]   major_words: 1.98931e+06
-[64733][      debug]   minor_collections: 14
-[64733][      debug]   major_collections: 3
-[64733][      debug]   compactions: 0
-[64733][      debug]   top_heap_words: 2330624
-[64733][      debug]   
-[64733][      debug] GC stats for main_process_full:
-[64733][      debug]   minor_words: 1.6515e+07
-[64733][      debug]   promoted_words: 2.25719e+06
-[64733][      debug]   major_words: 2.42435e+06
-[64733][      debug]   minor_collections: 23
-[64733][      debug]   major_collections: 4
-[64733][      debug]   compactions: 0
-[64733][      debug]   top_heap_words: 2330624
-[64733][      debug]   
-[64732][ intern err] Found inconsistent types for java.lang.String.value
-	classpath: signed char[_*_](*)
-	models: unsigned short[_*_](*)
-
-
-[64732][      debug] Global tenv size global_tenv_size_mb: 0
-[64732][      debug] done capturing all files
-[64732][      debug] GC stats for capture:
-[64732][      debug]   minor_words: 1.49648e+07
-[64732][      debug]   promoted_words: 1.89592e+06
-[64732][      debug]   major_words: 2.03534e+06
-[64732][      debug]   minor_collections: 16
-[64732][      debug]   major_collections: 3
-[64732][      debug]   compactions: 0
-[64732][      debug]   top_heap_words: 2330624
-[64732][      debug]   
-[64732][      debug] GC stats for main_process_full:
-[64732][      debug]   minor_words: 1.8085e+07
-[64732][      debug]   promoted_words: 2.29375e+06
-[64732][      debug]   major_words: 2.47038e+06
-[64732][      debug]   minor_collections: 25
-[64732][      debug]   major_collections: 4
-[64732][      debug]   compactions: 0
-[64732][      debug]   top_heap_words: 2330624
-[64732][      debug]   
 Merging captured targets...
-[64676][   progress] 
-[64676][      debug] [GRADLE] infer processed 2 lines in 8.17s
-[64676][      debug] 
-[64760][   progress] Merging type environments took 13.5ms, of which 12.5ms were spent storing the global tenv
-[64760][      debug] Global tenv size global_tenv_size_mb: 0
-[64760][      debug] GC stats for tenv_merge:
-[64760][      debug]   minor_words: 267217
-[64760][      debug]   promoted_words: 0
-[64760][      debug]   major_words: 170430
-[64760][      debug]   minor_collections: 0
-[64760][      debug]   major_collections: 0
-[64760][      debug]   compactions: 0
-[64760][      debug]   top_heap_words: 1331712
-[64760][      debug]   
-Merging 2 captured targets took 17.3ms
-[64676][   progress] 
-[64676][      debug] [GRADLE] infer processed 2 lines in 8.17s
-[64676][      debug] GC stats for capture:
-[64676][      debug]   minor_words: 742779
-[64676][      debug]   promoted_words: 617099
-[64676][      debug]   major_words: 748954
-[64676][      debug]   minor_collections: 2
-[64676][      debug]   major_collections: 3
-[64676][      debug]   compactions: 1
-[64676][      debug]   top_heap_words: 1371136
-[64676][      debug]   
-[64676][environment] Parallel jobs: 8
-[64676][   progress] Found 9 source files to analyze in /Users/samarthtiku/IdeaProjects/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM/infer-out
-[64762][   progress] Analysing block of 200 procs, starting with RoverTest$Lambda$_9_3.<init>(RoverTest)
-[64761][   progress] Analysing block of 200 procs, starting with RoverTest$Lambda$_9_15.<init>(RoverTest)
-[64767][   progress] Analysing block of 200 procs, starting with void RoverTest.testInvalidCommand()
-[64768][   progress] Analysing block of 200 procs, starting with void RoverTest.testInvalidRoverCreation()
-[64764][   progress] Analysing block of 200 procs, starting with Executable RoverTest.callsite_RoverTest$Lambda$_10_20(Rover)
-[64766][   progress] Analysing block of 200 procs, starting with String Rover.getPosition()
-[64763][   progress] Analysing block of 200 procs, starting with void OrientationTest.testLeftTurn()
-[64765][   progress] Analysing block of 200 procs, starting with void Rover.move()
-[64767][   progress] src/main/java/Plateau.java starting
-[64767][   progress] src/main/java/Plateau.java DONE
-[64767][   progress] src/test/java/OrientationTest.java starting
-[64767][   progress] src/test/java/OrientationTest.java DONE
-[64767][   progress] src/main/java/Orientation.java starting
-[64763][   progress] src/main/java/RoverUtilities.java starting
-[64765][   progress] src/test/java/RoverTest.java starting
-[64763][   progress] src/main/java/RoverUtilities.java DONE
-[64767][   progress] src/main/java/Orientation.java DONE
-[64763][   progress] src/main/java/StartMain.java starting
-[64766][   progress] src/test/java/RoverUtilitiesTest.java starting
-[64767][   progress] src/test/java/PlateauTest.java starting
-[64766][   progress] src/test/java/RoverUtilitiesTest.java DONE
-[64766][   progress] src/main/java/Rover.java starting
-[64766][   progress] src/main/java/Rover.java DONE
-[64763][   progress] src/main/java/StartMain.java DONE
-[64765][   progress] src/test/java/RoverTest.java DONE
-[64768][   progress] src/test/java/OrientationTest.java starting
-[64768][   progress] src/test/java/OrientationTest.java DONE
-[64763][   progress] src/main/java/Orientation.java starting
-[64764][   progress] src/test/java/RoverTest.java starting
-[64764][   progress] src/test/java/RoverTest.java DONE
-[64763][   progress] src/main/java/Orientation.java DONE
-[64763][   progress] src/test/java/RoverTest.java starting
-[64767][   progress] src/test/java/PlateauTest.java DONE
-[64763][   progress] src/test/java/RoverTest.java DONE
-[64766][   progress] src/test/java/RoverUtilitiesTest.java starting
-[64766][   progress] src/test/java/RoverUtilitiesTest.java DONE
-[64763][   progress] src/test/java/RoverUtilitiesTest.java starting
-[64763][   progress] src/test/java/RoverUtilitiesTest.java DONE
-[64763][   progress] src/main/java/RoverUtilities.java starting
-[64763][   progress] src/main/java/RoverUtilities.java DONE
-[64763][   progress] src/main/java/Rover.java starting
-[64764][   progress] src/main/java/StartMain.java starting
-[64763][   progress] src/main/java/Rover.java DONE
-[64768][   progress] src/test/java/RoverTest.java starting
-[64768][   progress] src/test/java/RoverTest.java DONE
-[64762][   progress] src/test/java/RoverTest.java starting
-[64762][   progress] src/test/java/RoverTest.java DONE
-[64763][   progress] src/test/java/RoverTest.java starting
-[64763][   progress] src/test/java/RoverTest.java DONE
-[64763][   progress] src/test/java/RoverTest.java starting
-[64763][   progress] src/test/java/RoverTest.java DONE
-[64764][   progress] src/main/java/StartMain.java DONE
-[64762][   progress] src/test/java/RoverTest.java starting
-[64762][   progress] src/test/java/RoverTest.java DONE
-[64763][   progress] src/main/java/StartMain.java starting
-[64763][   progress] src/main/java/StartMain.java DONE
-[64763][   progress] src/test/java/RoverTest.java starting
-[64763][   progress] src/test/java/RoverTest.java DONE
-[64764][   progress] src/main/java/StartMain.java starting
-[64764][   progress] src/main/java/StartMain.java DONE
-[64676][      debug] Backend stats:
-[64676][      debug]   summary_file_try_load= 1670
-[64676][      debug]   summary_read_from_disk= 315
-[64676][      debug]   summary_cache_hits= 656 (28%)
-[64676][      debug]   summary_cache_misses= 1670
-[64676][      debug]   ondemand_procs_analyzed= 87
-[64676][      debug]   proc_locker_lock_time_user= 0.00184000
-[64676][      debug]   proc_locker_lock_time_sys= 0.01731100
-[64676][      debug]   proc_locker_lock_time_wall= 0.02240171
-[64676][      debug]   proc_locker_lock_time_oncpu_pct= 85%
-[64676][      debug]   proc_locker_unlock_time_user= 0.00105500
-[64676][      debug]   proc_locker_unlock_time_sys= 0.01150900
-[64676][      debug]   proc_locker_unlock_time_wall= 0.01392871
-[64676][      debug]   proc_locker_unlock_time_oncpu_pct= 90%
-[64676][      debug]   restart_scheduler_useful_time_user= 1.09395000
-[64676][      debug]   restart_scheduler_useful_time_sys= 0.15186700
-[64676][      debug]   restart_scheduler_useful_time_wall= 1.73625370
-[64676][      debug]   restart_scheduler_useful_time_oncpu_pct= 72%
-[64676][      debug]   restart_scheduler_total_time_user= 1.18730700
-[64676][      debug]   restart_scheduler_total_time_sys= 0.17694700
-[64676][      debug]   restart_scheduler_total_time_wall= 1.87466304
-[64676][      debug]   restart_scheduler_total_time_oncpu_pct= 73%
-[64676][      debug]   pulse_aliasing_contradictions= 0
-[64676][      debug]   pulse_args_length_contradictions= 0
-[64676][      debug]   pulse_captured_vars_length_contradictions= 0
-[64676][      debug]   pulse_disjuncts_dropped= 620
-[64676][      debug]   pulse_interrupted_loops= 4
-[64676][      debug]   pulse_unknown_calls= 594
-[64676][      debug]   pulse_unknown_calls_on_hack_resource= 0
-[64676][      debug]   pulse_summaries_contradictions= 0
-[64676][      debug]   pulse_summaries_unsat_for_caller= 43
-[64676][      debug]   pulse_summaries_unsat_for_caller_percent= 49
-[64676][      debug]   pulse_summaries_with_some_unreachable_nodes= 24
-[64676][      debug]   pulse_summaries_with_some_unreachable_nodes_percent= 27
-[64676][      debug]   pulse_summaries_with_some_unreachable_returns= 0
-[64676][      debug]   pulse_summaries_with_some_unreachable_returns_percent= 0.0%
-[64676][      debug]   pulse_summaries_count= [0 -> 1, 1 -> 55, 2 -> 3, 3 -> 9, 5 -> 3, 10 -> 1, 20 -> 11, 21 -> 1, 34 -> 1, 40 -> 2]
-[64676][      debug]   pulse_summaries_total_disjuncts= 468
-[64676][      debug]   pulse_summaries_count_0_continue_program= 17
-[64676][      debug]   pulse_summaries_count_0_percent= 19
-[64676][      debug]   topl_reachable_calls= 0
-[64676][      debug]   timeouts= 0
-[64676][      debug]   timings= timings for fragment-retains-view:
-[64676][      debug]     p10: 0.000000s p20: 0.000000s p30: 0.000001s p40: 0.000001s
-[64676][      debug]     p50: 0.000001s p60: 0.000001s p70: 0.000001s p80: 0.000002s
-[64676][      debug]     p90: 0.000002s p95: 0.000002s p96: 0.000002s p97: 0.000002s
-[64676][      debug]     p98: 0.000002s p99: 0.000002s p99.9: 0.000002s p99.99: 0.000002s 
-[64676][      debug]   timings for inefficient-keyset-iterator:
-[64676][      debug]     p10: 0.000006s p20: 0.000008s p30: 0.000008s p40: 0.000009s
-[64676][      debug]     p50: 0.000011s p60: 0.000013s p70: 0.000017s p80: 0.000020s
-[64676][      debug]     p90: 0.000024s p95: 0.000046s p96: 0.000048s p97: 0.000066s
-[64676][      debug]     p98: 0.000070s p99: 0.000072s p99.9: 0.000073s p99.99: 0.000073s 
-[64676][      debug]   timings for pulse:
-[64676][      debug]     p10: 0.000639s p20: 0.000878s p30: 0.001186s p40: 0.001746s
-[64676][      debug]     p50: 0.002528s p60: 0.003514s p70: 0.007082s p80: 0.011805s
-[64676][      debug]     p90: 0.021869s p95: 0.050239s p96: 0.050802s p97: 0.059481s
-[64676][      debug]     p98: 0.064929s p99: 0.086945s p99.9: 0.100681s p99.99: 0.100681s 
-[64676][      debug]   timings for racerd:
-[64676][      debug]     p10: 0.000001s p20: 0.000003s p30: 0.000006s p40: 0.000036s
-[64676][      debug]     p50: 0.000055s p60: 0.000077s p70: 0.000094s p80: 0.000172s
-[64676][      debug]     p90: 0.000270s p95: 0.000948s p96: 0.001297s p97: 0.001402s
-[64676][      debug]     p98: 0.001980s p99: 0.002371s p99.9: 0.002471s p99.99: 0.002471s 
-[64676][      debug]   timings for starvation:
-[64676][      debug]     p10: 0.000040s p20: 0.000050s p30: 0.000067s p40: 0.000087s
-[64676][      debug]     p50: 0.000103s p60: 0.000143s p70: 0.000171s p80: 0.000227s
-[64676][      debug]     p90: 0.000579s p95: 0.000798s p96: 0.000866s p97: 0.001032s
-[64676][      debug]     p98: 0.001475s p99: 0.002011s p99.9: 0.004963s p99.99: 0.004963s 
-[64676][      debug]   timings for preanalysis:
-[64676][      debug]     p10: 0.000110s p20: 0.000135s p30: 0.000165s p40: 0.000192s
-[64676][      debug]     p50: 0.000216s p60: 0.000268s p70: 0.000431s p80: 0.001048s
-[64676][      debug]     p90: 0.001557s p95: 0.035525s p96: 0.036159s p97: 0.036250s
-[64676][      debug]     p98: 0.036374s p99: 0.036620s p99.9: 0.036635s p99.99: 0.036635s 
-[64676][      debug]   
-[64676][      debug]   longest_proc_duration_heap= [
-[64676][      debug]   147654us: src/test/java/RoverTest.java: void RoverTest.testProcessCommands()
-[64676][      debug]   144226us: src/main/java/Rover.java: void Rover.move()
-[64676][      debug]   130089us: src/test/java/RoverTest.java: void RoverTest.testInvalidCommand()
-[64676][      debug]   119045us: src/main/java/StartMain.java: void StartMain.teamOneRoverSimulation()
-[64676][      debug]   116312us: src/main/java/Rover.java: Rover.<init>(int,int,Orientation,Plateau)
-[64676][      debug]   111813us: src/test/java/OrientationTest.java: void OrientationTest.testLeftTurn()
-[64676][      debug]   109134us: src/test/java/RoverTest.java: void RoverTest.testInvalidRoverCreation()
-[64676][      debug]   102933us: src/main/java/RoverUtilities.java: void RoverUtilities.distanceCalculation()
-[64676][      debug]   91358us: src/main/java/Rover.java: void Rover.processCommands(String)
-[64676][      debug]   88375us: src/main/java/Rover.java: String Rover.getPosition()
-[64676][      debug]   ]
-[64676][      debug]   process_times_user= 1.21892900
-[64676][      debug]   process_times_sys= 0.22040900
-[64676][      debug]   process_times_wall= 4.00761871
-[64676][      debug]   process_times_oncpu_pct= 36%
-[64676][      debug]   useful_times_user= 1.21755400
-[64676][      debug]   useful_times_sys= 0.21854600
-[64676][      debug]   useful_times_wall= 1.98210417
-[64676][      debug]   useful_times_oncpu_pct= 72%
-[64676][      debug]   spec_store_times_user= 0.29913000
-[64676][      debug]   spec_store_times_sys= 0.03497500
-[64676][      debug]   spec_store_times_wall= 0.75566933
-[64676][      debug]   spec_store_times_oncpu_pct= 44%
-[64676][      debug]   
-[64676][      debug] GC stats for backend_stats.gc_stats_add.:
-[64676][      debug]   minor_words: 1.69153e+08
-[64676][      debug]   promoted_words: 6.60794e+06
-[64676][      debug]   major_words: 8.56226e+06
-[64676][      debug]   minor_collections: 170
-[64676][      debug]   major_collections: 18
-[64676][      debug]   compactions: 0
-[64676][      debug]   top_heap_words: 17401344
-[64676][      debug]   
-[64676][      debug] GC stats for backend_stats.gc_stats_max.:
-[64676][      debug]   minor_words: 5.86635e+07
-[64676][      debug]   promoted_words: 1.59204e+06
-[64676][      debug]   major_words: 2.04444e+06
-[64676][      debug]   minor_collections: 58
-[64676][      debug]   major_collections: 4
-[64676][      debug]   compactions: 0
-[64676][      debug]   top_heap_words: 2759168
-[64676][      debug]   
-[64676][      debug] Average over 8 processes
-[64676][      debug] GC stats for backend_stats.gc_stats_average.:
-[64676][      debug]   minor_words: 2.11442e+07
-[64676][      debug]   promoted_words: 825993
-[64676][      debug]   major_words: 1.07028e+06
-[64676][      debug]   minor_collections: 21
-[64676][      debug]   major_collections: 2
-[64676][      debug]   compactions: 0
-[64676][      debug]   top_heap_words: 2175168
-[64676][      debug]   
-[64676][      debug] Analysis phase finished in 519ms
-[64676][      debug] backend_stats.scheduler_process_analysis_time_user= 0.03765000
-[64676][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.07152600
-[64676][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.51803338
-[64676][      debug] backend_stats.scheduler_process_analysis_time_oncpu_pct= 21%
-[64676][      debug] GC stats for analysis_scheduler:
-[64676][      debug]   minor_words: 2.28178e+06
-[64676][      debug]   promoted_words: 37717
-[64676][      debug]   major_words: 346088
-[64676][      debug]   minor_collections: 3
-[64676][      debug]   major_collections: 2
-[64676][      debug]   compactions: 1
-[64676][      debug]   top_heap_words: 1576960
-[64676][      debug]   
-[64676][      debug] GC stats for report:
-[64676][      debug]   minor_words: 23924
-[64676][      debug]   promoted_words: 0
-[64676][      debug]   major_words: 514
-[64676][      debug]   minor_collections: 0
-[64676][      debug]   major_collections: 0
-[64676][      debug]   compactions: 0
-[64676][      debug]   top_heap_words: 1576960
-[64676][      debug]   
-[64676][      debug] GC stats for main_process_full:
-[64676][      debug]   minor_words: 6.18355e+06
-[64676][      debug]   promoted_words: 1.04692e+06
-[64676][      debug]   major_words: 1.53232e+06
-[64676][      debug]   minor_collections: 12
-[64676][      debug]   major_collections: 5
-[64676][      debug]   compactions: 2
-[64676][      debug]   top_heap_words: 1576960
-[64676][      debug]   
-[64679][      debug] Detected 4 spec overwrites.
-[64679][      debug] Sqlite write daemon: terminating
-[64676][      debug] Sqlite write daemon: waiting for process 64679 to finish
-[64679][      debug] dbwriter.useful_time_user= 0.04461800
-[64679][      debug] dbwriter.useful_time_sys= 0.01471200
-[64679][      debug] dbwriter.useful_time_wall= 0.13269041
-[64679][      debug] dbwriter.useful_time_oncpu_pct= 45%
-[64679][      debug] dbwriter.store_sql_user= 0.00562100
-[64679][      debug] dbwriter.store_sql_sys= 0.00736400
-[64679][      debug] dbwriter.store_sql_wall= 0.01559696
-[64679][      debug] dbwriter.store_sql_oncpu_pct= 83%
-[64679][      debug] dbwriter.store_sql_pct= 22%
-[64679][      debug] dbwriter.total_time_user= 0.05443400
-[64679][      debug] dbwriter.total_time_sys= 0.02380900
-[64679][      debug] dbwriter.total_time_wall= 13.89572617
-[64679][      debug] dbwriter.total_time_oncpu_pct= 1%
-[64679][      debug] [64676][      debug] Sqlite write daemon: process 64679 terminated
-[64676][     result] 
+[16050][   progress] 
+[16050][      debug] [GRADLE] infer processed 0 lines in 35.8ms
+[16050][      debug] 
+[16092][   progress] Merging type environments took 1.69ms, of which 1.66ms were spent storing the global tenv
+[16092][      debug] Global tenv size global_tenv_size_mb: 0
+[16092][      debug] GC stats for tenv_merge:
+[16092][      debug]   minor_words: 2069
+[16092][      debug]   promoted_words: 0
+[16092][      debug]   major_words: 1539
+[16092][      debug]   minor_collections: 0
+[16092][      debug]   major_collections: 0
+[16092][      debug]   compactions: 0
+[16092][      debug]   top_heap_words: 1157632
+[16092][      debug]   
+Merging 0 captured targets took 5.85ms
+[16050][   progress] 
+[16050][      debug] [GRADLE] infer processed 0 lines in 35.8ms
+[16050][      debug] GC stats for capture:
+[16050][      debug]   minor_words: 181464
+[16050][      debug]   promoted_words: 2482
+[16050][      debug]   major_words: 36799
+[16050][      debug]   minor_collections: 1
+[16050][      debug]   major_collections: 2
+[16050][      debug]   compactions: 1
+[16050][      debug]   top_heap_words: 1157632
+[16050][      debug]   
+[16050][  user warn] Nothing to compile. Try cleaning the build first.
+[16050][   progress] There was nothing to analyze.
+[16050][      debug] GC stats for report:
+[16050][      debug]   minor_words: 3899
+[16050][      debug]   promoted_words: 0
+[16050][      debug]   major_words: 514
+[16050][      debug]   minor_collections: 0
+[16050][      debug]   major_collections: 0
+[16050][      debug]   compactions: 0
+[16050][      debug]   top_heap_words: 1157632
+[16050][      debug]   
+[16050][      debug] GC stats for main_process_full:
+[16050][      debug]   minor_words: 3.32049e+06
+[16050][      debug]   promoted_words: 1.00767e+06
+[16050][      debug]   major_words: 1.08356e+06
+[16050][      debug]   minor_collections: 9
+[16050][      debug]   major_collections: 2
+[16050][      debug]   compactions: 1
+[16050][      debug]   top_heap_words: 1157632
+[16050][      debug]   
+[16053][      debug] Detected 0 spec overwrites.
+[16053][      debug] Sqlite write daemon: terminating
+[16050][      debug] Sqlite write daemon: waiting for process 16053 to finish
+[16053][      debug] dbwriter.useful_time_user= 0.00379300
+[16053][      debug] dbwriter.useful_time_sys= 0.00333800
+[16053][      debug] dbwriter.useful_time_wall= 0.00718879
+[16053][      debug] dbwriter.useful_time_oncpu_pct= 99%
+[16053][      debug] dbwriter.store_sql_user= 0.00000000
+[16053][      debug] dbwriter.store_sql_sys= 0.00000000
+[16053][      debug] dbwriter.store_sql_wall= 0.00000000
+[16053][      debug] dbwriter.store_sql_oncpu_pct= 0%
+[16053][      debug] dbwriter.store_sql_pct= 0%
+[16053][      debug] dbwriter.total_time_user= 0.00387800
+[16053][      debug] dbwriter.total_time_sys= 0.00376500
+[16053][      debug] dbwriter.total_time_wall= 4.73882842
+[16053][      debug] dbwriter.total_time_oncpu_pct= 0%
+[16053][      debug] [16050][      debug] Sqlite write daemon: process 16053 terminated
+[16050][     result] 
   No issues found  

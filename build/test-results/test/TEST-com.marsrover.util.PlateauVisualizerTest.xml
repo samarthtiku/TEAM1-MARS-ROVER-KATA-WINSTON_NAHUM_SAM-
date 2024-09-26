@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.marsrover.util.PlateauVisualizerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-26T01:31:31" hostname="samarths-Air.attlocal.net" time="0.022">
+  <properties/>
+  <testcase name="testVisualize()" classname="com.marsrover.util.PlateauVisualizerTest" time="0.022"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

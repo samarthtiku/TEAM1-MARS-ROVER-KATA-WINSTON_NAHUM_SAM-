@@ -10,10 +10,6 @@ repositories {
 }
 
 dependencies {
-    // Google Guice for dependency injection
-    implementation("com.google.inject:guice:5.1.0")
-    implementation("javax.inject:javax.inject:1")
-
     // Explicitly override the vulnerable Guava version
     implementation("com.google.guava:guava:31.1-jre") // Updated to a secure version of Guava
 

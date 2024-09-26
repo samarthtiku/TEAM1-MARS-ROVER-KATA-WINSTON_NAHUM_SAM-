@@ -50,4 +50,15 @@ class ConsoleInputHandlerTest {
         });
         assertEquals("Test exception", exception.getMessage());
     }
+    @Test
+    void testCloseInputHandler() throws IOException {
+        // Simulate user input via ByteArrayInputStream
+        String simulatedInput = "Test Input\n";
+        System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
+
+        ConsoleInputHandler inputHandler = new ConsoleInputHandler();
+
+        // Ensure that closing the reader works without throwing any exceptions
+        assertDoesNotThrow(inputHandler::close);
+    }
 }

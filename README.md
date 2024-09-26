@@ -119,7 +119,7 @@ Legend:
 This project was developed collaboratively by:
 
 1. **Winston** - [GitHub Profile](https://github.com/winston) <!-- Replace with actual GitHub profile link -->
-2. **Nahum** - [GitHub Profile](https://github.com/nahum) <!-- Replace with actual GitHub profile link -->
+2. **Nahum** - [GitHub Profile](https://github.com/nahumguess) <!-- Replace with actual GitHub profile link -->
 3. **Samarth Tiku** - [GitHub Profile](https://github.com/samarthtiku)
 
 ## 📋 Functional Requirements

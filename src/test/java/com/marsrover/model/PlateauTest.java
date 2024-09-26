@@ -1,9 +1,19 @@
 package com.marsrover.model;
 
+import com.marsrover.service.RoverFactory;
+import com.marsrover.service.RoverFactoryImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlateauTest {
+
+    private RoverFactory roverFactory;
+
+    @BeforeEach
+    void setUp() {
+        roverFactory = new RoverFactoryImpl();
+    }
 
     @Test
     void testValidPlateauCreation() {
@@ -37,5 +47,21 @@ class PlateauTest {
         assertTrue(plateau.isOccupied(1, 1));
         plateau.removeRover(1, 1);
         assertFalse(plateau.isOccupied(1, 1));
+    }
+
+    @Test
+    void testCollisionAvoidance() {
+        Plateau plateau = new Plateau(5, 5);
+        plateau.placeRover(2, 2, "R1");
+        plateau.placeRover(2, 3, "R2");
+
+        AbstractRover rover1 = roverFactory.createRover("R1", 2, 2, Orientation.N, plateau, "standard");
+        AbstractRover rover2 = roverFactory.createRover("R2", 2, 3, Orientation.S, plateau, "standard");
+
+        rover1.processCommands("M"); // This move should be blocked by R2
+        rover2.processCommands("M"); // This move should be blocked by R1
+
+        assertEquals("2 2 N", rover1.getPosition());
+        assertEquals("2 3 S", rover2.getPosition());
     }
 }

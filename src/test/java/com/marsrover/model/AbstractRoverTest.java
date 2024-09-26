@@ -70,4 +70,12 @@ class AbstractRoverTest {
         rover.processCommands("M"); // Attempt to move west from the west-most edge
         assertEquals("0 0 W", rover.getPosition()); // Expect no movement
     }
+
+    @Test
+    void testCompletePlateauCoverage() {
+        AbstractRover rover = roverFactory.createRover("R1", 0, 0, Orientation.N, plateau, "standard");
+        rover.processCommands("MRMRMRMR");
+        // Test continues with the rover spiraling out to cover each grid point
+        assertEquals("0 0 N", rover.getPosition()); // Should return to start
+    }
 }

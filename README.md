@@ -246,7 +246,7 @@ TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/
 ├── build.gradle.kts
 ├── settings.gradle.kts
 ├── README.md
-└── LICENSE.md
+
 ```
 
 ## 🧠 Concepts and Design Patterns
@@ -348,7 +348,7 @@ Here’s the **Design Patterns** section formatted in a README-friendly style:
 We appreciate all contributions, whether they're bug fixes, feature additions, or documentation improvements. Thank you for helping to make the Mars Rover Simulation project better!
 
 ## 📄 License
-This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License. 
 
 ### MIT License
 

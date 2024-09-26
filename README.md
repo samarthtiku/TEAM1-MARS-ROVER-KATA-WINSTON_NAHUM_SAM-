@@ -431,8 +431,6 @@ If you have any questions, issues, or suggestions regarding the Mars Rover Simul
 
 You can also open an issue on our [GitHub repository](https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/issues) for bug reports or feature requests.
 
-[... Previous sections remain unchanged ...]
-
 ## 🙏 Acknowledgments
 
 We would like to express our gratitude to:

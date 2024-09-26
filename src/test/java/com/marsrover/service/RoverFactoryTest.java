@@ -39,4 +39,11 @@ class RoverFactoryTest {
         assertThrows(IllegalArgumentException.class, () ->
                 roverFactory.createRover("ROVER1", 1, 2, Orientation.N, plateau, "flying"));
     }
+
+    @Test
+    void testInvalidRoverInitialization() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            roverFactory.createRover("R1", -1, 10, Orientation.N, plateau, "standard");
+        });
+    }
 }

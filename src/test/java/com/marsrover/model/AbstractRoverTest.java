@@ -1,6 +1,8 @@
 package com.marsrover.model;
 
 
+import com.marsrover.service.RoverFactory;
+import com.marsrover.service.RoverFactoryImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,6 +11,9 @@ class AbstractRoverTest {
 
     private Plateau plateau;
     private TestRover rover;
+
+    private RoverFactory roverFactory;
+
 
     private class TestRover extends AbstractRover {
         public TestRover(String id, int x, int y, Orientation orientation, Plateau plateau) {
@@ -30,6 +35,7 @@ class AbstractRoverTest {
     void setUp() {
         plateau = new Plateau(5, 5);
         rover = new TestRover("TEST1", 1, 2, Orientation.N, plateau);
+        roverFactory = new RoverFactoryImpl();
     }
 
     @Test
@@ -56,5 +62,12 @@ class AbstractRoverTest {
         assertEquals(2, rover.getY());
         assertEquals(Orientation.N, rover.getOrientation());
         assertEquals(0, rover.getDistanceTraveled());
+    }
+
+    @Test
+    void testEdgeBehavior() {
+        AbstractRover rover = roverFactory.createRover("R1", 0, 0, Orientation.W, plateau, "standard");
+        rover.processCommands("M"); // Attempt to move west from the west-most edge
+        assertEquals("0 0 W", rover.getPosition()); // Expect no movement
     }
 }

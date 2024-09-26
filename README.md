@@ -233,35 +233,45 @@ We use the following tools for ensuring code quality:
 ## 📁 Project Structure
 ```
 TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/
-├── src/
-│   ├── main/java/com/marsrover/
-│   │   ├── application/
-│   │   │   ├── MarsRoverApplication.java
-│   │   │   └── MarsRoverProgram.java
-│   │   ├── model/
-│   │   │   ├── AbstractRover.java
-│   │   │   ├── StandardRover.java
-│   │   │   ├── JumpingRover.java
-│   │   │   ├── Plateau.java
-│   │   │   └── Orientation.java
-│   │   ├── service/
-│   │   │   ├── InputHandler.java
-│   │   │   ├── ConsoleInputHandler.java
-│   │   │   ├── RoverFactory.java
-│   │   │   └── RoverFactoryImpl.java
-│   │   └── util/
-│   │       ├── PlateauVisualizer.java
-│   │       └── Configuration.java
-│   └── test/java/com/marsrover/
-│       ├── application/
-│       ├── model/
-│       ├── service/
-│       └── util/
-├── .github/workflows/
-│   └── ci.yml
-├── build.gradle.kts
-├── settings.gradle.kts
-├── README.md
+├── src/                              # Source code of the project.
+│   ├── main/java/com/marsrover/       # Main codebase.
+│   │   ├── application/               # Application Layer: Handles program startup and control flow.
+│   │   │   ├── MarsRoverApplication.java    # Main entry point for the application.
+│   │   │   └── MarsRoverProgram.java        # Core program logic.
+│   │   ├── model/                    # Model Layer: Represents domain objects and state.
+│   │   │   ├── AbstractRover.java          # Base class for all rover types.
+│   │   │   ├── StandardRover.java          # Concrete implementation of a standard rover.
+│   │   │   ├── JumpingRover.java          # Concrete implementation of a jumping rover.
+│   │   │   ├── Plateau.java               # Plateau class representing the grid on which rovers move.
+│   │   │   └── Orientation.java           # Enum for rover directions (N, E, S, W).
+│   │   ├── service/                   # Service Layer: Business logic and execution.
+│   │   │   ├── InputHandler.java           # Interface for handling inputs.
+│   │   │   ├── ConsoleInputHandler.java    # Implementation for handling console inputs.
+│   │   │   ├── RoverFactory.java           # Factory interface for creating rovers.
+│   │   │   └── RoverFactoryImpl.java       # Implementation of the RoverFactory interface.
+│   │   └── util/                     # Utility Layer: Helper classes.
+│   │       ├── PlateauVisualizer.java     # Provides visualization of the plateau for console output.
+│   │       └── Configuration.java         # Configuration settings and constants.
+│   └── test/java/com/marsrover/       # Test codebase.
+│       ├── application/             
+│       │   └── MarsRoverProgramTest.java     # Tests the application’s core logic and flow.
+│       ├── model/                   
+│       │   ├── AbstractRoverTest.java        # Tests shared rover functionalities.
+│       │   ├── JumpingRoverTest.java         # Tests specific to JumpingRover behavior.
+│       │   ├── OrientationTest.java          # Tests for the Orientation enum.
+│       │   ├── PlateauTest.java              # Tests plateau representation and behavior.
+│       │   └── StandardRoverTest.java        # Tests for StandardRover behavior.
+│       ├── service/                 
+│       │   ├── ConsoleInputHandlerTest.java  # Tests the ConsoleInputHandler for user inputs.
+│       │   └── RoverFactoryTest.java         # Tests for correct rover creation via the RoverFactory.
+│       └── util/                    
+│           └── PlateauVisualizerTest.java    # Tests the visualization logic for the plateau.
+├── .github/workflows/               # CI/CD configuration files.
+│   └── ci.yml                        # GitHub Actions config for Continuous Integration.
+├── build.gradle.kts                 # Build script for the project (Gradle Kotlin DSL).
+├── settings.gradle.kts              # Settings for the Gradle project.
+├── README.md                        # Project documentation.
+
 
 ```
 

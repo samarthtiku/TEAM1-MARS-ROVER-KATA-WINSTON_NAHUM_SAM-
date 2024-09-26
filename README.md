@@ -316,6 +316,50 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
 1. **Command-Line Interface (CLI)**: For user input and output.
 2. **ANSI Escape Codes**: For colorful and formatted console output.
 
+[... Previous sections remain unchanged ...]
+
+## 🤝 Contributing
+
+We welcome contributions to the Mars Rover Simulation project! Your input is valuable in making this project better for everyone. Here's how you can contribute:
+
+### Getting Started
+
+1. Fork the repository on GitHub.
+2. Clone your forked repository to your local machine.
+3. Create a new branch for your feature or bug fix:
+   ```
+   git checkout -b feature/AmazingFeature
+   ```
+
+### Making Changes
+
+1. Make your changes in your feature branch.
+2. Add or update tests as necessary.
+3. Ensure your code adheres to our coding standards (see below).
+4. Run the test suite to make sure all tests pass:
+   ```
+   ./gradlew test
+   ```
+5. Update the documentation, including README.md and ADRs if necessary.
+
+### Submitting Changes
+
+1. Commit your changes:
+   ```
+   git commit -m 'Add some AmazingFeature'
+   ```
+2. Push to your fork:
+   ```
+   git push origin feature/AmazingFeature
+   ```
+3. Open a Pull Request from your fork to our repository.
+
+### Pull Request Guidelines
+
+- Provide a clear description of the problem you're solving or the feature you're adding.
+- Include any relevant issue numbers in the PR description.
+- Ensure all tests are passing.
+- Update documentation as needed.
 
 ### Coding Standards
 - Follow Java coding conventions

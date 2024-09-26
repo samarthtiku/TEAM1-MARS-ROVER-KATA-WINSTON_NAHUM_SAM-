@@ -102,7 +102,7 @@ We've elevated the original concept by incorporating:
 Legend:
 ✨ - Extra Credit Feature
 
-### Key Enhancements and Extra Credit Features
+### Key Enhancements and Extra Credit Features(OUTPUT SCREENSHOTS: https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/blob/seventh-Branch/MARSROVER_TEAM1_OUTPUT.pdf)
 
 1. **Multiple Rover Types**: We introduced both standard and jumping rovers, adding complexity to the simulation.
 2. **Advanced Movement Commands**: In addition to the basic L, R, and M commands, we implemented a J command for jumping rovers.

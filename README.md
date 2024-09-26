@@ -316,8 +316,6 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
 1. **Command-Line Interface (CLI)**: For user input and output.
 2. **ANSI Escape Codes**: For colorful and formatted console output.
 
-[... Previous sections remain unchanged ...]
-
 ## 🤝 Contributing
 
 We welcome contributions to the Mars Rover Simulation project! Your input is valuable in making this project better for everyone. Here's how you can contribute:

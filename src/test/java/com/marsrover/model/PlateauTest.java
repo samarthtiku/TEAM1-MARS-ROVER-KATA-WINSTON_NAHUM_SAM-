@@ -65,11 +65,21 @@ class PlateauTest {
         assertEquals("2 3 S", rover2.getPosition());
     }
      @Test
-    void testMultipleRovers() {
-        plateau.placeRover(1, 1, "ROVER1");
-        plateau.placeRover(2, 2, "ROVER2");
-        assertTrue(plateau.isOccupied(1, 1));
-        assertTrue(plateau.isOccupied(2, 2));
-        assertFalse(plateau.isOccupied(3, 3)); 
-    }
+     void testMultipleRovers() {
+         // Set up the plateau
+         Plateau plateau = new Plateau(5, 5);
+
+         // Place two rovers on the plateau
+         plateau.placeRover(1, 1, "ROVER1");
+         plateau.placeRover(2, 2, "ROVER2");
+
+         // Check if the positions are correctly occupied
+         assertTrue(plateau.isOccupied(1, 1), "ROVER1 should occupy position (1, 1)");
+         assertTrue(plateau.isOccupied(2, 2), "ROVER2 should occupy position (2, 2)");
+
+         // Ensure the third position (3, 3) is not occupied
+         assertFalse(plateau.isOccupied(3, 3), "No rover should occupy position (3, 3)");
+     }
+
 }
+

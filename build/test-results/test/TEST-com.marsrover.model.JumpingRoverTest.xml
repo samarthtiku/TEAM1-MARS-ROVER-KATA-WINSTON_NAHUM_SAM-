@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.marsrover.model.JumpingRoverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-09-26T15:01:23" hostname="samarths-Air.attlocal.net" time="0.076">
+<testsuite name="com.marsrover.model.JumpingRoverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-09-27T03:34:07" hostname="samarths-Air.attlocal.net" time="0.085">
   <properties/>
-  <testcase name="testMoveOutOfBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.024"/>
-  <testcase name="testJumpOutOfBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.005"/>
-  <testcase name="testInvalidCommand()" classname="com.marsrover.model.JumpingRoverTest" time="0.007"/>
-  <testcase name="testMultipleCommands()" classname="com.marsrover.model.JumpingRoverTest" time="0.009"/>
-  <testcase name="testJumpWithinBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.007"/>
-  <testcase name="testProcessCommands()" classname="com.marsrover.model.JumpingRoverTest" time="0.007"/>
-  <testcase name="testMoveWithinBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.002"/>
+  <testcase name="testMoveOutOfBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.022"/>
+  <testcase name="testJumpOutOfBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.012"/>
+  <testcase name="testInvalidCommand()" classname="com.marsrover.model.JumpingRoverTest" time="0.024"/>
+  <testcase name="testMultipleCommands()" classname="com.marsrover.model.JumpingRoverTest" time="0.004"/>
+  <testcase name="testJumpWithinBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.003"/>
+  <testcase name="testProcessCommands()" classname="com.marsrover.model.JumpingRoverTest" time="0.004"/>
+  <testcase name="testMoveWithinBounds()" classname="com.marsrover.model.JumpingRoverTest" time="0.003"/>
   <system-out><![CDATA[Processing commands for Rover R2 at initial position (0, 5)
 Rover R2 attempting to move from (0, 5) to (0, 6)
 Warning: Rover R2 cannot move. Position out of bounds.

@@ -1,8 +1,59 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
 # Editor-based HTTP Client requests
 /httpRequests/
+
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# Qodana configuration
+qodana.yaml
+
+# Gradle wrapper files
+gradlew.bat
+gradlew
+
+# Build output directories
+/build/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/build/
+
+# GitHub workflows
+/.github/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/.github/
+/workflows/
+
+# IntelliJ IDEA project files
+/.idea/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/.idea/
+/cache/idea/
+
+# Cache and other ignored directories
+/222/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/222/
+
+# Gradle directories
+/gradle/wrapper/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/gradle/wrapper/
+
+# Infer static analysis output
+/infer-out/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/infer-out/
+
+# IDE output directories
+/out/production/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/out/production/
+
+# Results directories
+/results/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/results/
+
+# Log directories
+/log/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/log/
+
+# Target directories (used by Maven)
+/target/
+TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/target/

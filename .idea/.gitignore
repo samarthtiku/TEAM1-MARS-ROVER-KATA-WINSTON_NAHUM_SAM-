@@ -1,0 +1,27 @@
+# macOS system files
+.DS_Store
+
+# Build directories
+/build
+/out
+/target
+
+# Gradle files
+.gradle
+/gradlew
+/gradlew.bat
+/gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA files
+/.idea
+*.iml
+*.ipr
+*.iws
+
+# Qodana specific files
+/qodana.yaml
+
+# Logs and temporary files
+/log
+*.log
+/tmp

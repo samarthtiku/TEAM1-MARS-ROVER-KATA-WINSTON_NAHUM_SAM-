@@ -1,0 +1,216 @@
+*************************************************************************************
+******* Sep 9 , 2024 : Notes for Tested Input and Expected Output ******
+*************************************************************************************
+
+Tested Input
+
+5 5
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRM
+
+******************************** 5 5 - Plateau size: 5x5 grid ( counting should start from 0)  ***********************
+
+==> Plateau Size: The first line of input defines the size of the plateau
+==> 5 5( Format: Two integers separated by a space)
+==> 5x5 grid (remember, we start counting from 0).
+==> The lower-left corner is always assumed to be (0,0).
+==>( 5,5) represents the upper-right corner of the plateau.
+
+
+****************************************** First rover and Second Rover **************************************
+
+"Rover Information" : After the plateau size, the input contains information for each rover. Each rover's input consists of two lines: a. Rover's Initial Position and Orientation:
+
+                                             First rover:
+1 2 N - Initial position: (1,2) facing North ( Two integers and one letter, all separated by spaces)
+LMLMLMLMM - Movement instructions ( A string of characters without spaces)
+
+    * 1: x-coordinate
+    * 2: y-coordinate
+    * N: orientation (facing North)
+
+LMLMLMLMM  - Rover's Movement Instructions
+
+    Each character represents a single instruction:
+        * L: Turn left 90 degrees
+        * R: Turn right 90 degrees
+        * M: Move forward one grid point
+
+
+                                             Second rover:
+3 3 E - Initial position: (3,3) facing East (Two integers and one letter, all separated by spaces)
+MMRMMRMRRM - Movement instructions ( A string of characters without spaces)
+
+    * 3: x-coordinate
+    * 3: y-coordinate
+    * E: orientation (facing East)
+
+    Each character represents a single instruction:
+    * L: Turn left 90 degrees
+    * R: Turn right 90 degrees
+    * M: Move forward one grid point
+
+Possible orientations: N (North), E (East), S (South), W (West)
+
+******************************************************************************************************************************************************************
+=====================The input can contain info for Multiple Rovers===============================================================================================
+===============Each rover's info (position and instructions) comes one after another.=============================================================================
+============Rovers behave in sequential order, the first rover finishes its movements before the second one begins.===============================================
+******************************************************************************************************************************************************************
+
+
+Expected Output:
+1 3 N
+5 1 E
+
+First line: 1 3 N
+This represents the final position and orientation of the first rover.
+* 1: Final x-coordinate
+* 3: Final y-coordinate
+* N: Final orientation (facing North)
+
+Second line: 5 1 E
+This represents the final position and orientation of the second rover.
+* 5: Final x-coordinate
+* 1: Final y-coordinate
+* E: Final orientation (facing East)
+
+
+
+
+  5 | (0,5) (1,5) (2,5) (3,5) (4,5) (5,5)
+  4 | (0,4) (1,4) (2,4) (3,4) (4,4) (5,4)
+  3 | (0,3) (1,3) (2,3) (3,3) (4,3) (5,3)
+  2 | (0,2) (1,2) (2,2) (3,2) (4,2) (5,2)
+  1 | (0,1) (1,1) (2,1) (3,1) (4,1) (5,1)
+  0 | (0,0) (1,0) (2,0) (3,0) (4,0) (5,0)
+    ——————————————————————————————————————
+       0     1     2     3     4     5
+
+
+  y
+    ^
+  5 |  *   *   *   *   *   *
+    |
+  4 |  *   *   *   *   *   *
+    |
+  3 |  *   *   *   *   *   *
+    |
+  2 |  *   *   *   *   *   *
+    |
+  1 |  *   *   *   *   *   *
+    |
+  0 |  *   *   *   *   *   *
+    +-------------------------> x
+      0   1   2   3   4   5
+
+  "*" ==> represents a possible position
+  Grid size: 5x5 (5 units in each direction)
+  Total positions: 36 (6x6)
+
+  It's a 5x5 grid because there are 5 units or cells in each direction.
+  There are 36 possible positions (6x6) because we count both the starting and ending coordinates in each dimension.
+
+  The valid coordinates range from (0,0) to (5,5)
+
+    5 +---+---+---+---+---+
+      |   |   |   |   |   |
+    4 +---+---+---+---+---+
+      |   |   |   |   |   |
+    3 +---+---+---+---+---+
+      |   |   |   |   |   |
+    2 +---+---+---+---+---+
+      |   |   |   |   |   |
+    1 +---+---+---+---+---+
+      |   |   |   |   |   |
+    0 +---+---+---+---+---+
+      0   1   2   3   4   5
+
+  "+" ==> represents coordinate points
+  "---" and '|' ==> represents cell boundaries
+****************=================Spaces between lines are the cells====================******************
+
+*** 6 coordinate points ( + ) create 5 spaces (cells) between them in each direction.
+*** Thus, it's a 5x5 grid of units/cells, despite having 6x6 coordinate points.
+
+
+
+Notes on breaking down of our MARS ROVER project structure
+
+This is an Example of how we might approach ( Used CamelCase for naming )
+
+Main Source Code
+Main.java : will be sorted out soon and classes would be adjusted accordingly
+Plateau.java: Represents the plateau on Mars.
+Orientation.java: Enum for cardinal directions (N, E, S, W).
+Position.java: Represents a position on the plateau (x, y coordinates).
+Rover.java: Represents a rover, its position, and orientation.
+Command.java: Enum for commands (L, R, M).
+RMarsoverApplication.java: Main application class to run the simulation.
+---- we might add or remove =====
+
+
+Test Source Code
+PlateauTest.java: Unit tests for Plateau class.
+OrientationTest.java: Unit tests for Orientation enum.
+PositionTest.java: Unit tests for Position class.
+RoverTest.java: Unit tests for Rover class.
+CommandTest.java: Unit tests for Command enum.
+MarsRoverApplicationTest.java: Integration tests for the entire application
+---- we might add or remove =====
+
+
+Build Configuration:
+
+pom.xml: configuration file for managing dependencies and build process.
+
+
+Other Files:
+.gitignore:
+README.md: Project description, setup instructions,  usage guide , &c.
+ARCHITECTURE.md: Documents architectural decisions (ADRs).
+
+
+// AnsiColors.java
+public class AnsiColors {
+    // Reset
+    public static final String RESET = "\u001B[0m";
+
+
+    // Regular Colors
+    public static final String BLACK = "\u001B[30m";
+    public static final String RED = "\u001B[31m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String BLUE = "\u001B[34m";
+    public static final String PURPLE = "\u001B[35m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String WHITE = "\u001B[37m";
+
+
+    // Bold
+    public static final String BLACK_BOLD = "\u001B[1;30m";
+    public static final String RED_BOLD = "\u001B[1;31m";
+    public static final String GREEN_BOLD = "\u001B[1;32m";
+    public static final String YELLOW_BOLD = "\u001B[1;33m";
+    public static final String BLUE_BOLD = "\u001B[1;34m";
+    public static final String PURPLE_BOLD = "\u001B[1;35m";
+    public static final String CYAN_BOLD = "\u001B[1;36m";
+    public static final String WHITE_BOLD = "\u001B[1;37m";
+
+
+    // Background
+    public static final String BLACK_BACKGROUND = "\u001B[40m";
+    public static final String RED_BACKGROUND = "\u001B[41m";
+    public static final String GREEN_BACKGROUND = "\u001B[42m";
+    public static final String YELLOW_BACKGROUND = "\u001B[43m";
+    public static final String BLUE_BACKGROUND = "\u001B[44m";
+    public static final String PURPLE_BACKGROUND = "\u001B[45m";
+    public static final String CYAN_BACKGROUND = "\u001B[46m";
+    public static final String WHITE_BACKGROUND = "\u001B[47m";
+}
+
+
+//4th branch commit

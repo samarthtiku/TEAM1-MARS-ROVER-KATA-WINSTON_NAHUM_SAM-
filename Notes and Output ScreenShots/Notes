@@ -139,7 +139,7 @@ This represents the final position and orientation of the second rover.
 
 Notes on breaking down of our MARS ROVER project structure
 
-This is an Example of how we might approach ( Used CamelCase for naming )
+This is an Example of how we might approach ( Used camelCase and PascalCase for naming )
 
 Main Source Code
 Main.java : will be sorted out soon and classes would be adjusted accordingly

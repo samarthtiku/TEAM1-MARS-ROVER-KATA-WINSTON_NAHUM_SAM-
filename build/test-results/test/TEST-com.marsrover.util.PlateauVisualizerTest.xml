@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.marsrover.util.PlateauVisualizerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-27T03:34:08" hostname="samarths-Air.attlocal.net" time="0.011">
-  <properties/>
-  <testcase name="testVisualize()" classname="com.marsrover.util.PlateauVisualizerTest" time="0.01"/>
-  <testcase name="testAvoidNegativeCoordinates()" classname="com.marsrover.util.PlateauVisualizerTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -32,3 +32,4 @@ class OrientationTest {
         assertThrows(IllegalArgumentException.class, () -> Orientation.fromString("X"));
     }
 }
+//..

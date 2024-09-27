@@ -20,10 +20,8 @@ gradlew
 /build/
 TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/build/
 
-# GitHub workflows
-/.github/
-TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/.github/
-/workflows/
+
+
 
 # IntelliJ IDEA project files
 /.idea/

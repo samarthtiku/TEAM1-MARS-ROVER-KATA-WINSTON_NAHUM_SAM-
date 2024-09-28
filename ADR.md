@@ -168,7 +168,7 @@ Use an **Enum** to represent the four cardinal directions (N, E, S, W) and inclu
 
 ---
 
-## 🚀 ADR 11: Strategy Pattern for Rover Movement Logic
+## 🚀 ADR 11: Strategy Pattern for Rover Movement Logic (Planned for 8th branch):
 
 🟦 **Context**
 We might want to support different movement strategies for various rover types (e.g., standard vs. jumping rovers) and allow future extensibility.

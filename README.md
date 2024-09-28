@@ -292,7 +292,7 @@ Our Mars Rover Simulation project incorporates a wide range of software engineer
   - Encapsulates each command, making it easy to manage command sequences and extend with new commands.
   - Facilitates future enhancements like undo/redo functionality.
 
-- **Strategy Pattern**: 
+- **Strategy Pattern(Planned for 8th branch):**: 
   - Handles different movement algorithms for various rover types.
   - For example, `StandardMovementStrategy` for standard rovers and `JumpingMovementStrategy` for jumping rovers.
   - Simplifies the `Rover` class by delegating movement behavior, making it easy to add new strategies.

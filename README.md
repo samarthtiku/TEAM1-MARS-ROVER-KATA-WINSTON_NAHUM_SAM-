@@ -102,7 +102,7 @@ We've elevated the original concept by incorporating:
 Legend:
 ✨ - Extra Credit Feature
 
-### Key Enhancements and Extra Credit Features(OUTPUT SCREENSHOTS: https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/blob/seventh-Branch/MARSROVER_TEAM1_OUTPUT.pdf)
+### Key Enhancements and Extra Credit Features(OutPut ScreenShots: https://github.com/samarthtiku/TEAM1-MARS-ROVER-KATA-WINSTON_NAHUM_SAM-/blob/seventh-Branch/Notes%20and%20Output%20ScreenShots/MARSROVER_TEAM1_OUTPUT.pdf)
 
 1. **Multiple Rover Types**: We introduced both standard and jumping rovers, adding complexity to the simulation.
 2. **Advanced Movement Commands**: In addition to the basic L, R, and M commands, we implemented a J command for jumping rovers.
@@ -224,11 +224,6 @@ We use the following tools for ensuring code quality:
   infer run -- ./gradlew build
   ```
 
-- [📏 Checkstyle](https://checkstyle.sourceforge.io/): Code style enforcement
-  Run Checkstyle with:
-  ```bash
-  ./gradlew checkstyleMain
-  ```
 
 ## 📁 Project Structure
 ```
